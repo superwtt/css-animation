@@ -54,9 +54,9 @@ body:after {
   --dy: calc(var(--size) - var(--y));
 }
 #boxes div:first-child {
-  --x: 84;
-  --y: 75;
-  --size: 128;
+  --x: 42;
+  --y: 29;
+  --size: 100;
 }
 
 #boxes div:first-child,
