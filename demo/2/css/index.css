@@ -1,11 +1,8 @@
-html,
-body {
-  height: 100%;
+html, body { 
+  height: 100%; 
   margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
+
 body, #boxes div { 
   display: -webkit-box; 
   display: -ms-flexbox; 
@@ -17,6 +14,7 @@ body, #boxes div {
       -ms-flex-pack: center; 
           justify-content: center;
 }
+
 body:after {
   z-index: -1;
   content: '';
@@ -30,12 +28,21 @@ body:after {
   background: var(--bg-color, #f44336);
   opacity: .1;
 }
-#boxes{
+
+#boxes {
+  /* 计数器起个名字 */
   counter-reset: number; 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-#boxes div{
+
+@media (max-width: 320px) {
+  #boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+#boxes div {
   counter-increment: number;
   width: 10vw;
   height: 10vw;
@@ -53,10 +60,11 @@ body:after {
   --dx: calc(var(--size) - var(--x));
   --dy: calc(var(--size) - var(--y));
 }
+
 #boxes div:first-child {
-  --x: 42;
-  --y: 29;
-  --size: 100;
+  --x: 84;
+  --y: 75;
+  --size: 128;
 }
 
 #boxes div:first-child,
@@ -96,7 +104,7 @@ body:after {
           transform: translate3d(0, -.5em, 0);
 }
 
-#boxes div:first-child:after,
+ #boxes div:first-child:after,
 #boxes div:hover:after {
   color: rgba(255, 255, 255, .7);
   -webkit-transform: translate3d(0, 0, 0);
