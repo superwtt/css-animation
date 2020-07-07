@@ -1,17 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css">
-</head>
-<body>
-    <div id="boxes">
-        <div style="--color:#e91e63"></div>
-    </div>
-    <script src="./js/index.js"></script>
-</body>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>水波纹效果</title>
+		
+<style type="text/css">
+    .content {
+        width: 300px;
+        height: 300px;
+        box-shadow: 0px 5px 10px 0px rgb(177, 174, 174);
+        background-color: rgb(243, 225, 202);
+        background-image: linear-gradient(rgb(250, 203, 203) 60%,
+            rgba(22, 21, 21, 0.8));
+        overflow: hidden;
+        position: relative;
+    }
+ 
+    .wave {
+        position: absolute;
+        width: 550px;
+        height: 550px;
+        top: -300px;
+        left: -100px;
+        background-color: rgba(111, 194, 243, 0.3);
+        border-radius: 38%;
+        animation: drift 5s linear infinite;
+    }
+ 
+    .wave:nth-of-type(1) {
+        animation-duration: 5s;
+    }
+ 
+    .wave:nth-of-type(2) {
+        animation-duration: 7s;
+    }
+ 
+    .wave:nth-of-type(3) {
+        animation-duration: 10s;
+    }
+ 
+    @keyframes drift {
+        from {
+            transform: rotate(360deg);
+        }
+    }
+    </style>
+
+	</head>
+	<body>
+        <div class="content">
+            <span class="wave"></span>
+            <span class="wave"></span>
+            <span class="wave"></span>
+        </div>
+        </body>
+        
 </html>
-<!-- https://juejin.im/post/590c3341ac502e0065319810 -->
-<!-- https://www.cnblogs.com/coco1s/archive/2017/07/18/7197662.html -->
