@@ -12,9 +12,9 @@ var boxes = document.querySelectorAll('#boxes > div');
       var x = size * .3 * .7 + .7 * e.offsetX;
       var y = size * .3 * .7 + .7 * e.offsetY;
 
-      console.log(size)
-      console.log("e.offsetX",x)
-      console.log("e.offsetY",e.offsetY)
+      // console.log(size)
+      // console.log("e.offsetX",x)
+      // console.log("e.offsetY",e.offsetY)
       
       box.style.setProperty('--x', x);
       box.style.setProperty('--y', y);
