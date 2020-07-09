@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 800px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        .transition1{
+            background: linear-gradient(#fb3 20%,#58a 80%);
+        }
+        .transition2{
+            background: linear-gradient(#fb3 50%,#58a 50%);
+        }
+        .transition3{
+            background: linear-gradient(#fb3 50%,#58a 0);
+        }
+        .transition4{
+            background: linear-gradient(#fb3 33.33%,#58a 0,#58a 66.66%,yellow 0);
+        }
+        .angle1{
+            background: linear-gradient(to right,#fb3 50%,#58a 0);
+        }
+        .angle2{
+            background: linear-gradient(45deg,#fb3 50%,#58a 0);
+        }
+        .angle3{
+            background: linear-gradient(45deg,#fb3 25%,#58a 0,#58a 50%,#fb3 0,#fb3 75%,#58a 0);
+        }
+        .angle4{
+            background: linear-gradient(red 40%, yellow 30%, blue 65%);;
+        }
+        .angle5{
+            background:linear-gradient(red 0%, orange 10%, orange 30%, yellow 50%, yellow 70%, green 90%, green 100%);
+            /* linear-gradient(red, orange 10% 30%, yellow 50% 70%, green 90%); */
+            /* linear-gradient(red 0%, orange 10% 30%, yellow 50% 70%, green 90% 100%); */
+        }
+    </style>
+</head>
+<body>
+    <div class="transition1">
+        <p>stop位置不同</p>
+    </div>
+    <div class="transition2">
+        <p>stop位置相同</p>
+    </div>
+    <div class="transition3">
+        <p>stop位置为0</p>
+    </div>
+    <div class="transition4"></div>
+    <hr />
+    <div class="angle1"></div>
+    <div class="angle2"></div>
+    <div class="angle3"></div>
+    <div class="angle4"></div>
+    <div class="angle5"></div>
+</body>
+</html>

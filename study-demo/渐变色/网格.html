@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        .complex1 {
+            background: white;
+            background-image:
+                linear-gradient(90deg, rgba(200, 0, 0, .5) 50%, transparent 0),
+                linear-gradient(rgba(200, 0, 0, .5) 50%, transparent 0);
+            background-size: 30px 30px;
+        }
+
+        .complex2 {
+            background: #655;
+            background-image: radial-gradient(tan 30%, transparent 0), radial-gradient(tan 30%, transparent 0);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+
+        .complex3{
+            background: #eee;
+            background-image: linear-gradient(45deg, #bbb 25%, transparent 0), 
+                linear-gradient(45deg, transparent 75%, #bbb 0), 
+                linear-gradient(45deg, #bbb 25%, transparent 0), 
+                linear-gradient(45deg, transparent 75%, #bbb 0);
+            background-position: 0 0, 15px 15px, 15px 15px, 30px 30px;
+            background-size: 30px 30px;
+        }
+        .complex4{
+            background: 
+            linear-gradient(to right,rgba(200,0,0,0.5) 50%,transparent 0),
+            linear-gradient(to bottom,rgba(200,0,0,0.5) 50%,transparent 0);
+            background-size: 30px 30px;
+        }
+        .complex5{
+            background: yellowgreen;
+            border-radius: 50%;
+
+            background-image: linear-gradient(to right, transparent 50%, #655 0);
+            transform: rotate(20deg);/*只是为了旋转一下*/
+        }
+        .complex5::after{
+            display: block;
+            content: "";
+            height: 100%;
+            margin-left: 50%;
+            border-radius: 0 100% 100%  0 / 50%;
+            background-color: #f00;
+            transform-origin: left; /* margin-left 50%之后 中心点偏移到最右边的，这样做是为了让旋转中心点回到圆的中心 */
+            transform: rotate(30deg);
+        }
+        .test{
+            background: pink;
+        }
+        .test::after{
+            display: block;
+            /* width: 100%; */
+            /* height: 100%; */
+            margin-left: 50%;
+            content: "123";
+            background: gray;
+        }
+        .complex6{
+            background:linear-gradient(90deg, #f00 15px, #2bbf85 0);   
+        }
+        .complex7{
+            width: 200px;
+            height: 100px;
+            background: 
+             linear-gradient(-60deg, transparent 20%, #2bbf85 0) bottom right,
+             linear-gradient(-120deg, transparent 20%, #2bbf85 0) top right;
+            background-size: 100% 50%, 100% 50%;
+            background-repeat: no-repeat, no-repeat;
+        }
+        .complex8{
+           background: linear-gradient(10deg,#f00 15px,#2bbf85 0); 
+        }
+        .complex9{
+           background: 
+           linear-gradient(60deg,pink 20%,#f00 0), 
+           linear-gradient(120deg,pink 20%,#f00 0); 
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="complex1"></div>
+    <div class="complex2"></div>
+    <div class="complex3"></div>
+    <div class="complex4"></div>
+    <div class="complex5"></div>
+    <div class="test"></div> -->
+    <!-- <div class="complex6"></div> -->
+    <!-- <div class="complex7"></div>
+    <div class="complex8"></div> -->
+    <div class="complex9"></div>
+</body>
+
+</html>
