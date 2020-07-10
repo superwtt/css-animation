@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .complex1 {
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+
+            box-shadow: -40px 0 0 rgba(250, 189, 189, 1),
+                inset 0 0 0 15px rgba(250, 189, 189, 0),
+                40px 0 0 rgba(250, 189, 189, 0);
+        }
+        .br-1{
+            width: 200px;
+            height: 100px;
+            margin-bottom: 10px;
+        
+            background: linear-gradient(45deg,#06f,#f6c,#06c);
+        }
+        .theme1{
+           border-radius: 50px / 10px; 
+        }
+        /*椭圆*/
+        .theme2{
+           border-radius: 100px / 50px; 
+        }
+        /*半角*/
+        .theme3{
+           border-radius: 50px 50px 50px 50px/ 10px 10px 50px 10px; 
+        }
+        .theme4{
+           border-radius: 10px / 0; 
+        }
+
+        .ani1{
+            animation: ani1 1s linear infinite none;
+        }
+        .ani2{
+            animation: ani2 1s linear infinite none;
+        }
+        .ani3{
+            border-radius: 20% 50%;
+            animation: ani3 1s linear 1 none;
+        }
+
+        @keyframes ani1 {
+            0%{
+                border-radius: 50px / 10px; 
+            }
+            100%{
+                border-radius: 100px / 50px; 
+            }
+        }
+
+        @keyframes ani2 {
+            0%{
+                border-radius: 50px / 10px; 
+            }
+            100%{
+                border-radius: 50px 50px 200px 50px/ 10px 10px 100px 10px; 
+            }
+        }
+
+        @keyframes ani3 {
+          to{
+              transform: rotate(360deg);
+          }         
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="complex1"></div> -->
+    <div class="br-1 theme1"></div>
+    <div class="br-1 theme1 ani1"></div>
+    <div class="br-1 theme1 ani2"></div>
+    <div class="br-1  ani3"></div>
+</body>
+
+</html>

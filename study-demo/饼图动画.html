@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,html{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .pie{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: pink;
+        }
+        .pie::after{
+            content: "";
+            display: block;
+            height: 100%;
+            background: gray;
+            margin-left: 50%;
+            border-radius: 0 100px 100px 0/ 100px;
+
+            transform-origin:left ;
+
+            animation-name: rotate;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes rotate {
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- https://zhuanlan.zhihu.com/p/87527330 -->
+    <div class="pie"></div>
+</body>
+</html>
