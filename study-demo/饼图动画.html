@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body,html{
+        body,
+        html {
             width: 100%;
             height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .pie{
+
+        .pie {
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            background: pink;
+            background: linear-gradient(to right, pink 50%, gray 0);
         }
-        .pie::after{
+
+        .pie::after {
             content: "";
             display: block;
             height: 100%;
-            background: gray;
+            background: pink;
             margin-left: 50%;
             border-radius: 0 100px 100px 0/ 100px;
 
-            transform-origin:left ;
+            transform-origin: left;
+            transform: rotate(30deg);
 
-            animation-name: rotate;
-            animation-duration: 2s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
+            animation: skin 4s linear infinite,
+                bg 8s step-end infinite;
         }
-        @keyframes rotate {
-            to{
-                transform: rotate(360deg);
+
+        @keyframes skin {
+            to {
+                transform: rotate(.5turn);
+            }
+        }
+
+        @keyframes bg {
+            50% {
+                background: gray;
             }
         }
     </style>
 </head>
+
 <body>
-    <!-- https://zhuanlan.zhihu.com/p/87527330 -->
     <div class="pie"></div>
 </body>
+
 </html>
