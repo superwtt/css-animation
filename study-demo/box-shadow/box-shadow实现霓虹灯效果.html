@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,html{
+            width: 100%;
+            height: 1800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background-color: #111;
+        }
+        p{
+            cursor: pointer;
+            font-size: 20vmin;
+        }
+        .pink{
+            color: #fff;
+            text-shadow: 
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 15px #fff,
+            0 0 20px #E91E63,
+            0 0 30px #E91E63,
+            0 0 45px #E91E63,
+            0 0 50px #E91E63,
+            0 0 75px #E91E63;
+
+            animation-name: ani1;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .orange{
+            color: #ff5722;
+        }
+        .orange:hover{
+          animation-name: ani2;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+        .yellow{
+            color: #ffeb3b;
+        }
+        .yellow:hover{
+          animation-name: ani3;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+        @keyframes ani1 {
+           to{
+            text-shadow: 
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 15px #fff,
+            0 0 20px #E91E63,
+            0 0 30px #E91E63,
+            0 0 45px #E91E63,
+            0 0 50px #E91E63,
+            0 0 75px #E91E63,
+            0 0 80px #E91E63,
+            0 0 85px #E91E63,
+            0 0 95px #E91E63;
+           } 
+        }
+        @keyframes ani2 {
+            to{
+                text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 20px #fff, 0 0 30px #ff5722, 0 0 40px #ff5722 , 0 0 50px #ff5722;
+            }
+        }
+        @keyframes ani3 {
+            to{
+                text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 20px #fff, 0 0 30px #ffeb3b, 0 0 40px #ffeb3b , 0 0 50px #ffeb3b;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="pink">PINK</p>
+    </div>
+    <div>
+        <p class="orange">Box-Shadow</p>
+    </div>
+    <div>
+        <p class="yellow">yellow</p>
+    </div>
+</body>
+</html>

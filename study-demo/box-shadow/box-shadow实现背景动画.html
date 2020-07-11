@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .shadow {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            border: 1px solid #333;
+            box-sizing: border-box;
+            margin: 50px;
+            float: left;
+            overflow: hidden;
+        }
+
+        .shadow::before {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: -50px;
+            left: -50px;
+            box-shadow:
+                50px 50px, 150px 50px, 250px 50px,
+                50px 100px, 150px 100px, 250px 100px,
+                50px 150px, 150px 150px, 250px 150px,
+                50px 200px, 150px 200px, 250px 200px,
+                50px 250px, 150px 250px, 250px 250px;
+            animation: move 3s infinite linear;
+        }
+
+        @keyframes move {
+            25% {
+                transform: translate(50px);
+                color: coral;
+                box-shadow:
+                    50px 50px, 150px 50px, 250px 50px,
+                    50px 100px, 150px 100px, 250px 100px,
+                    50px 150px, 150px 150px, 250px 150px,
+                    50px 200px, 150px 200px, 250px 200px,
+                    50px 250px, 150px 250px, 250px 250px;
+            }
+
+            50% {
+                transform: translate(0px);
+                color: brown;
+                border-radius: 0;
+                box-shadow:
+                    50px 50px, 150px 50px, 250px 50px,
+                    100px 100px, 200px 100px, 300px 100px,
+                    50px 150px, 150px 150px, 250px 150px,
+                    100px 200px, 200px 200px, 300px 200px,
+                    50px 250px, 150px 250px, 250px 250px;
+            }
+
+            75% {
+                transform: translate(0px);
+                color: teal;
+                border-radius: 50%;
+                box-shadow:
+                    50px 50px, 150px 50px, 250px 50px,
+                    100px 100px, 200px 100px, 300px 100px,
+                    50px 150px, 150px 150px, 250px 150px,
+                    100px 200px, 200px 200px, 300px 200px,
+                    50px 250px, 150px 250px, 250px 250px;
+            }
+
+            100% {
+                border-radius: 0%;
+                box-shadow:
+                    50px 50px, 150px 50px, 250px 50px,
+                    50px 100px, 150px 100px, 250px 100px,
+                    50px 150px, 150px 150px, 250px 150px,
+                    50px 200px, 150px 200px, 250px 200px,
+                    50px 250px, 150px 250px, 250px 250px;
+            }
+        }
+
+        .gradient {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            border: 1px solid #333;
+            box-sizing: border-box;
+            margin: 50px;
+            float: left;
+            /* background-image: linear-gradient(90deg, #000 0%, #000 50%, #fff 50%, #fff 100%); */
+            /* background-size: 100px 100px; */
+            
+        }
+        .gradient::before{
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: -50px;
+            left: -50px;
+            box-shadow:
+                50px 50px #f00, 150px 50px rgb(228, 165, 165), 250px 50px green,
+                50px 100px pink, 150px 100px rgb(59, 5, 110), 250px 100px rgb(212, 226, 15),
+                50px 150px rgb(68, 200, 68), 150px 150px rgb(226, 118, 226), 250px 150px rgb(7, 138, 72),
+                50px 200px rgb(192, 12, 12), 150px 200px rgb(8, 99, 173), 250px 200px rgb(228, 77, 195),
+                50px 250px rgb(87, 19, 177), 150px 250px rgb(207, 148, 11), 250px 250px rgb(138, 9, 88);
+        }
+        @keyframes boxShadow {
+            0%{
+
+            }
+            50%{
+                box-shadow:
+                100px 50px #f00, 200px 50px rgb(228, 165, 165), 250px 50px green,
+                100px 100px pink, 150px 100px rgb(59, 5, 110), 250px 100px rgb(212, 226, 15),
+                100px 150px rgb(68, 200, 68), 150px 150px rgb(226, 118, 226), 250px 150px rgb(7, 138, 72),
+                100px 200px rgb(192, 12, 12), 150px 200px rgb(8, 99, 173), 250px 200px rgb(228, 77, 195),
+                100px 250px rgb(87, 19, 177), 150px 250px rgb(207, 148, 11), 250px 250px rgb(138, 9, 88);
+            }
+            100%{
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shadow"></div>
+    <div class="gradient"></div>
+</body>
+
+</html>

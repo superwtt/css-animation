@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(90deg, hsl(199, 98%, 50%), hsl(199, 98%, 38%));
+            overflow: hidden;
+        }
+
+        div {
+            position: relative;
+            width: 30vmin;
+            height: 30vmin;
+            background: #fff;
+            margin: 30vmin auto;
+        }
+
+        div::before,
+        div::after{
+           content: "";
+           position: absolute;
+           top: 0;
+           left: 0;
+           right: 0;
+           bottom: 0;
+        }
+        div::before{
+            transform-origin: 0 50%;
+            transform:translate(100%,0) skewY(45deg);
+
+            background:linear-gradient(90deg,rgba(0,0,0,.3),transparent);
+        }
+        div::after{
+            transform-origin: 0 0;
+            transform:translate(0,100%) skewX(45deg);
+
+            background:linear-gradient(to bottom,rgba(0,0,0,.3),transparent);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
