@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 500px;
+            height: 500px;
+
+            filter: sepia(1) saturate(4) hue-rotate(295deg);
+        }
+        a{
+            background: hsl(335, 100%, 50%);
+        }
+        .img1{
+            mix-blend-mode: luminosity;
+        }
+    </style>
+</head>
+<body>
+    <img src="./1.JPG" alt="">
+    <a href="">
+        <img class="img1" src="./1.JPG" alt="">
+    </a>
+</body>
+</html>

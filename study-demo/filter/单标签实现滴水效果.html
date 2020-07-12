@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: blur(3px) contrast(10);
+            overflow: hidden;
+        }
+
+        div {
+            position: relative;
+            width: 640px;
+            height: 120px;
+
+            color: #fff;
+            font-size: 120px;
+            border-bottom: 10px solid #fff;
+            transform: skewY(5deg);
+        }
+
+        div::after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            width: 10px;
+            height: 20px;
+            border-radius: 50%;
+            z-index: 1;
+            background-color: #fff;
+            transform: translate(0, 0);
+            animation: load 12s ease-out;
+        }
+
+        @keyframes load {
+            80% {
+                bottom: -30px;
+                transform: translate(623px, 0);
+            }
+
+            93% {
+                transform: translate(623px, 3px);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(623px, 150px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>MAGICCSS</div>
+</body>
+
+</html>

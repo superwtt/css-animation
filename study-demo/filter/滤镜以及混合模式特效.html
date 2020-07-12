@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .halfone {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            border: 1px solid #f00;
+            background: white;
+            filter: contrast(1000000%);
+            overflow: hidden;
+        }
+
+        img {
+            filter: brightness(0.5) blur(4px);
+        }
+
+        .halfone::after {
+            content: "";
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            right: -100%;
+            bottom: -100%;
+            background-blend-mode: multiply;
+            background: radial-gradient(8px 8px, cyan, white),
+                radial-gradient(8px 8px, magenta, white),
+                radial-gradient(8px 8px, yellow, white);
+            background-size: 8px 8px;
+            background-position: 0 -3px, -2px 0, 2px 0;
+            mix-blend-mode: saturation;
+            pointer-events: none;
+            transform: rotate(11.25deg);
+            transition: 1s ease-in-out transform;
+            z-index: 1;
+            animation: 3s animation-overlay infinite alternate;
+        }
+
+        @keyframes animation-overlay {
+            0% {
+                transform: rotate(450deg) scale(15);
+            }
+
+            100% {
+                transform: rotate(-90deg);
+            }
+        }
+
+        @keyframes animation-filter {
+            0% {
+                filter: brightness(0.5) blur(40px);
+            }
+
+            100% {
+                filter: brightness(0.5) blur(4px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="halfone">
+        <img src="https://avatars3.githubusercontent.com/u/8554143?s=460&v=4">
+    </div>
+</body>
+
+</html>

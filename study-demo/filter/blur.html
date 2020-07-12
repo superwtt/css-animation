@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            width: 800px;
+            height: 800px;
+            background: url(./1.JPG) 0 / cover fixed;
+        }
+
+        .wrap {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 300px;
+            text-align: center;
+            background: hsla(0, 0%, 100%, 0.3);
+            overflow: hidden;
+            
+        }
+        .wrap::before{
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+         filter: blur(20px);
+          z-index: -1;
+          background: url(./1.JPG) 0 / cover fixed;
+          margin: -30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrap">
+            <p>
+                哈哈哈
+            </p>
+            <p>
+                哈哈哈
+            </p>
+            <p>
+                哈哈哈
+            </p>
+            <p>
+                哈哈哈
+            </p>
+            <p>
+                哈哈哈
+            </p>
+            <p>
+                哈哈哈
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
