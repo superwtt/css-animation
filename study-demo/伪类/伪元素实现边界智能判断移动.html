@@ -1,11 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .box {
+            margin: 5em auto;
+            position: relative;
+            width: 10em;
+            height: 10em;
+            line-height: 10em;
+            overflow: hidden;
+        }
+
+        .box>div {
+            background-color: coral;
+            position: absolute;
+
+
+            cursor: pointer;
+            color: #fff;
+
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            text-align: center;
+            line-height: inherit;
+            transition: transform 0.4s ease;
+        }
+
+        .box-left {
+            background-color: crimson;
+        }
+
+        .box-top {
+            background-color: darkcyan;
+        }
+
+        .box-right {
+            background-color: darkmagenta;
+        }
+
+        .box-bottom {
+            background-color: darkseagreen;
+        }
+
+        .hover::before,
+        .box-left::before,
+        .box-top::before,
+        .box-right::before,
+        .box-bottom::before {
+            position: absolute;
+            content: "";
+            width: 70.71%;
+            height: 70.71%;
+            transform: rotate(45deg);
+        }
+
+        .box-left::before {
+            left: 100%;
+            transform-origin: 0 0;
+            background-color: #f00;
+        }
+
+        .box-right::before {
+            right: 100%;
+            bottom: 0;
+            transform-origin: 100% 100%;
+            background-color: lightblue;
+        }
+
+        .box-top::before {
+            top: 100%;
+            right: 0;
+            transform-origin: 100% 0;
+            background-color: lightcoral;
+        }
+
+        .box-bottom::before {
+            bottom: 100%;
+            left: 0;
+            transform-origin: 0 100%;
+            background-color: lightseagreen;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="box">
+        <div class="box-left">left->right</div>
+        <div class="box-top">top->bottom</div>
+        <div class="box-right">right->left</div>
+        <div class="box-bottom">bottom->top</div>
+        <div class="hover">Hover Me</div>
+    </div>
 </body>
+
 </html>
