@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .g-container {
+            width: 500px;
+            margin: auto;
+            padding: 10px;
+            border: 1px solid #eee;
+        }
+
+        .content-box {
+            border: 1px solid #eee;
+            height: 200px;
+            padding: 20px;
+            text-align: center;
+        }
+        label {
+            display: inline-block;
+            cursor: pointer;
+            width: 240px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline-block;
+        }
+
+        .content-box {
+            display: none;
+        }
+
+        .content>div {
+            display: none;
+        }
+        .radio-A:checked~ ul li,
+        .radio-B:checked~ ul li{
+            background:#ddd;
+            color:#000;
+        }
+        .radio-A:checked~ ul li:first-child{
+            background:#ff7300;
+            color:#fff;
+        }
+        .radio-B:checked~ ul li:last-child{
+            background:#ff7300;
+            color:#fff;
+        }
+
+        .radio-A:checked~.content>div:first-child {
+            display: block;
+        }
+        .radio-B:checked~.content>div:last-child {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="g-container">
+        <input id="radioA" type="radio" name="radio" class="radio-A" />
+        <input id="radioB" type="radio" name="radio" class="radio-B" />
+        <ul>
+            <li>
+                <label for="radioA">
+                    TabA
+                </label>
+            </li>
+            <li>    
+                <label for="radioB">
+                    TabB
+                </label>
+            </li>
+        </ul>
+        <div class="content">
+            <div class="content-A">
+                A
+            </div>
+            <div class="content-B">
+                B
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

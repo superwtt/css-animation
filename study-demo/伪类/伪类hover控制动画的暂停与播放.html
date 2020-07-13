@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+           width: 500px;
+           border: 1px solid #eee;
+           margin: auto;
+        }
+        button{
+            padding: 15px;
+            width: 120px;
+            cursor: pointer;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: chocolate;
+            margin-top: 20px;
+
+            animation-name: animate;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        button:hover ~ .box{
+            animation-play-state: paused;
+        }
+        @keyframes animate {
+            to{
+                transform: translateX(200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button>Stop</button>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

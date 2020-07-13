@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            margin: auto;
+            border-radius: 10px;
+            background-color: lightseagreen;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+         
+        .pop-with-border::after,
+        .pop::after {
+            position: absolute;
+            left: -20px;
+            top: 20px;
+            content: "";
+            border: 10px solid transparent;
+            border-right-color: lightseagreen;
+        }
+        .pop-with-border{
+            filter: drop-shadow(-5px 5px 3px #cdcdcd);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pop">
+        对话框
+    </div>
+    <div class="pop-with-border">
+        对话框不规则阴影
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            display: none;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: chocolate;
+            margin-top: 20px;
+
+            animation-name: animate;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes animate {
+            to {
+                transform: translateX(100px);
+            }
+        }
+
+        #stop:checked~.box {
+            animation-play-state: paused;
+        }
+
+        #start:checked~.box {
+            animation-play-state: running;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="radio" name="radio" id="stop" />
+        <input type="radio" name="radio" id="start" />
+        <ul>
+            <li>
+                <label for="stop">暂停</label>
+            </li>
+            <li>
+                <label for="start">开始</label>
+            </li>
+        </ul>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

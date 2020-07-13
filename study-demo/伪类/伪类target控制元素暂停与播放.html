@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            display: inline-block;
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+            background: none;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            text-align: center;
+            color: #333;
+            text-decoration: none;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: chocolate;
+            margin-top: 20px;
+
+            animation-name: animate;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes animate {
+            to{
+                transform: translateX(200px);
+            }
+        }
+        #contentA:target~.box{
+           animation-play-state: paused;
+        }
+        #contentB:target~.box{
+            animation-play-state: running;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#contentA">stop</a>
+        <a href="#contentB">start</a>
+        <div id="contentA" class="content-A">content-A</div>
+        <div id="contentB" class="content-A">content-A</div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

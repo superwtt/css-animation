@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 500px;
+            margin: auto;
+            padding: 10px;
+            border: 1px solid #eee;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline-block;
+            background-color: cadetblue;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .content {
+            border: 1px solid #eee;
+        }
+        .content>div{
+            display: none;
+        }
+        #contentA:target{
+            display: block;
+        }
+        #contentB:target{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li>
+                <a href="#contentA">TabA</a>
+            </li>
+            <li>
+                <a href="#contentB">TabB</a>
+            </li>
+        </ul>
+        <div class="content">
+            <div id="contentA">contentA</div>
+            <div id="contentB">contentB</div>
+        </div>
+    </div>
+</body>
+
+</html>
