@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            margin: 50px auto;
+            width: 800px;
+            height: 48px;
+            font-size: 24px;
+            flex-direction: row;
+        }
+        ul li{
+            display: inline-block;
+            width: 100px;
+            line-height: 48px;
+            text-align: center;
+        }
+        ul li:not(:last-child){
+            border-right: 1px solid #666;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>右边框</li>
+        <li>右边框</li>
+        <li>右边框</li>
+        <li>右边框</li>
+    </ul>
+</body>
+</html>
