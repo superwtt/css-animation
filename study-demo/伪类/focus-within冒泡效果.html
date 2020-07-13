@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        .g-father,
+        .g-children {
+            padding: 30px;
+            border: 1px solid #999;
+        }
+
+        input:focus {
+            background: #00bcd4;
+        }
+
+        html:focus-within {
+            background: #e91e63;
+        }
+
+        body:focus-within {
+            background: #ff5722;
+        }
+
+        .g-father:focus-within {
+            background: #ffeb3b;
+        }
+
+        .g-children:focus-within {
+            background: #4caf50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="g-father">
+        <div class="g-children">
+            <input type="text" value="button">
+        </div>
+    </div>
+</body>
+
+</html>

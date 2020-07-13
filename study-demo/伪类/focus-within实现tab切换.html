@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 300px;
+            margin: auto;
+            border: 1px solid #eee;
+            padding: 15px;
+        }
+        button{
+            border: none;
+            background: none;
+            outline: none;
+            width: 140px;
+            cursor: pointer;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+        .content-box{
+            font-size: 24px;
+            padding: 20px;
+        }
+        .content-A,
+        .content-B{
+            display: none;
+        }
+
+        .nab-A:focus-within{
+            background-color: yellowgreen;
+            color: #fff;
+        }
+        .nab-B:focus-within{
+            background-color: yellowgreen;
+            color: #fff;
+        }
+        
+        .container .nab-A:focus-within~.content-box .content-A{
+            display: block;
+        }
+        .container .nab-B:focus-within~.content-box .content-B{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="nab-A">Tab A</button>
+        <button class="nab-B">Tab B</button>
+        <div class="content-box">
+            <div class="content-A">
+                A
+            </div>
+            <div class="content-B">
+                B
+            </div>
+        </div>
+    </div>
+</body>
+</html>

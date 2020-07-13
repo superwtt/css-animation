@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .g-container {
+            padding: 10px;
+            transition: all 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .g-username {
+            padding: 15px;
+
+        }
+
+        .g-input {
+            border: none;
+    outline: none;
+    width: 20vw;
+    padding: 15px;
+    font-size: 18px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    transition: 0.3s;
+        }
+
+        .g-input:focus {
+            border-color: hsl(199, 98%, 48%);
+        }
+
+        .g-container:focus-within {
+            transform: translateY(-4px);
+            /* // background: hsla(199, 98%, 48%, .2); */
+            box-shadow: 0 0 10px #ddd;
+            border-color: hsl(199, 98%, 48%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="g-container">
+        <div class="g-username">
+            <input type="text" placeholder="user name" class="g-input">
+        </div>
+        <div class="g-username">
+            <input type="text" placeholder="user name" class="g-input">
+        </div>
+    </div>
+</body>
+
+</html>

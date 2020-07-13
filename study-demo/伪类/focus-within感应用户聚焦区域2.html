@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .g-container {
+            width: 300px;
+            margin: 50px auto;
+        }
+
+        p {
+            line-height: 1.4;
+            padding-left: 40px;
+        }
+
+        input {
+            position: absolute;
+            border: none;
+            outline: none;
+            background: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid #aaa;
+            box-sizing: border-box;
+            top: 50%;
+            left: 10px;
+            transform: translate(0, -50%);
+            cursor: pointer;
+        }
+
+        .g-selection {
+            position: relative;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid transparent;
+        }
+
+        .g-selection:focus-within {
+            background:
+                linear-gradient(90deg, #03a9f4 50%, transparent 0) repeat-x,
+                linear-gradient(90deg, #03a9f4 50%, transparent 0) repeat-x,
+                linear-gradient(0deg, #03a9f4 50%, transparent 0) repeat-y,
+                linear-gradient(0deg, #03a9f4 50%, transparent 0) repeat-y;
+            background-size: 8px 1px, 8px 1px, 1px 8px, 1px 8px;
+            background-position: 0 0, 0 100%, 0 0, 100% 0;
+            animation: linearGradientMove .5s infinite linear;
+        }
+
+        input {
+            background: #03a9f4;
+        }
+
+        @keyframes linearGradientMove {
+            100% {
+                background-position: 6% 0, -6% 100%, 0 -6%, 100% 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="g-container">
+        <div class="g-selection">
+            <input type="button">
+            <p>
+                ：focus-within表示它或者它的 后代元素获得焦点。
+                即，它自己获得焦点，或者它的后代元素获得焦点，都会触发focus-within
+            </p>
+        </div>
+        <div class="g-selection">
+            <input type="button">
+            <p>
+                ：focus-within表示它或者它的 后代元素获得焦点。
+                即，它自己获得焦点，或者它的后代元素获得焦点，都会触发focus-within
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

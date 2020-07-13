@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        .g-wrap {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .g-wrap {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(0, 0, 0, 0.4);
+        }
+
+        .g-container {
+            position: relative;
+            width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 15px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        input {
+            border: 1px solid #eee;
+            outline: none;
+            padding: 15px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        img {
+            position: absolute;
+            top: -45px;
+            left: 50%;
+            margin-left: -50px;
+            width: 100px;
+        }
+
+        img:not(.g-normal) {
+            display: none;
+        }
+
+        /* .g-username1:not(:focus-within),
+        .g-password1:not(:focus-within){
+           display: none;
+        } */
+
+        .g-username:focus-within~img {
+            display: none;
+        }
+
+        .g-username:focus-within input {
+            border-color: #007fff;
+        }
+
+        .g-username:focus-within img {
+            display: block;
+        }
+
+        .g-username:focus-within~.g-normal,
+        .g-password:focus-within~.g-normal {
+            display: none;
+        }
+
+        .g-password:focus-within input {
+            border-color: #007fff;
+        }
+
+        .g-password:focus-within img {
+            display: block;
+        }
+    </style>
+</head>
+<!-- $bg-normal: 'https://b-gold-cdn.xitu.io/v3/static/img/normal.0447fe9.png';
+$bg-username: 'https://b-gold-cdn.xitu.io/v3/static/img/greeting.1415c1c.png';
+$bg-password: 'https://b-gold-cdn.xitu.io/v3/static/img/blindfold.58ce423.png'; -->
+
+<body>
+    <div class="g-wrap">
+        <div class="g-container">
+            <h2>登录</h2>
+            <div class="g-username">
+                <input type="text" placeholder="请输入用户名" class="input">
+                <img src="https://b-gold-cdn.xitu.io/v3/static/img/greeting.1415c1c.png" class="g-username" alt="">
+            </div>
+            <div class="g-password">
+                <input type="password" placeholder="请输入密码" class="input">
+                <img src="https://b-gold-cdn.xitu.io/v3/static/img/blindfold.58ce423.png" class="g-password1" alt="">
+            </div>
+            <img src="https://b-gold-cdn.xitu.io/v3/static/img/normal.0447fe9.png" class="g-normal" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
