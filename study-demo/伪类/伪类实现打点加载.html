@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 30px;
+        }
+        p::after{
+            content: "";
+            animation-name: load;
+            animation-duration: .8s;
+            animation-delay: -0.2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;   
+        }
+        @keyframes load {
+            30%{
+                content: ".";
+            }
+            60%{
+                content: "..";
+            }
+            90%,100%{
+                content: "...";
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>加载中</p>
+</body>
+</html>

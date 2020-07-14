@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style type="text/css">
+            
+            .a1{
+                position: relatve;
+                height: 200px;
+                width: 80px;
+                background: springgreen;
+                border:1px solid black;    
+                margin:100px 200px;
+                color: white;
+                font-size: 30px;
+            }
+            #b2{
+                position: absolute;
+                background: rgba(0,0,225,0.5);
+                height: 100px;
+                width: 50px;
+                color: white;
+                transform:rotate(70deg)
+            }
+                
+            
+        </style>
+    </head>
+    <body>
+        1
+        <div class="a1">
+            <div id="b2" style="transform-origin: left top;">左上</div>
+        </div>
+        2
+        <div class="a1">
+            <div id="b2" style="transform-origin: right top;">右上</div>
+        </div>
+        3
+        <div class="a1">
+            <div id="b2" style="transform-origin: center top;">中上</div>
+        </div>
+        4
+        <div class="a1">
+            <div id="b2" style="transform-origin: left bottom;">左下</div>
+        </div>
+        5
+        <div class="a1">
+            <div id="b2" style="transform-origin: left center;">左中</div>
+        </div>
+        6
+        <div class="a1">
+            <div id="b2" style="transform-origin: right top;">右上</div>
+        </div>
+        7
+        <div class="a1">
+            <div id="b2" style="transform-origin: right bottom;">右下</div>
+        </div>
+        8
+        <div class="a1">
+            <div id="b2" style="transform-origin: bottom center;">下中</div>
+        </div>
+        9
+        <div class="a1">
+            <div id="b2" style="transform-origin:center center;">中中</div>
+        </div>
+    </body>
+</html>

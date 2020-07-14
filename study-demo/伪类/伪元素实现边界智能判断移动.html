@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .box {
-            margin: 5em auto;
+        .container {
+            margin: 15em auto;
             position: relative;
             width: 10em;
             height: 10em;
@@ -15,85 +15,121 @@
             overflow: hidden;
         }
 
-        .box>div {
-            background-color: coral;
-            position: absolute;
-
-
+        div {
             cursor: pointer;
+            width: 10em;
+            height: 10em;
+            background-color: orange;
             color: #fff;
-
-            position: absolute;
-            width: inherit;
-            height: inherit;
             text-align: center;
-            line-height: inherit;
+            line-height: 10em;
+            position: absolute;
             transition: transform 0.4s ease;
         }
 
         .box-left {
-            background-color: crimson;
-        }
-
-        .box-top {
-            background-color: darkcyan;
+            background-color: orchid;
         }
 
         .box-right {
-            background-color: darkmagenta;
+            background-color: lemonchiffon;
         }
 
-        .box-bottom {
-            background-color: darkseagreen;
+        .box-top {
+            background-color: rosybrown;
         }
 
-        .hover::before,
+        .box-left {
+            background-color: sandybrown;
+        }
+
         .box-left::before,
-        .box-top::before,
         .box-right::before,
+        .box-top::before,
         .box-bottom::before {
-            position: absolute;
             content: "";
+            position: absolute;
+            display: block;
             width: 70.71%;
             height: 70.71%;
             transform: rotate(45deg);
         }
 
+        .box-left {
+            transform: translateX(-100%);
+        }
+
+        .box-right {
+            transform: translateX(100%);
+        }
+
+        .box-top {
+            transform: translateY(-100%);
+        }
+
+        .box-bottom {
+            transform: translateY(100%);
+        }
+
         .box-left::before {
             left: 100%;
+            /* background-color: seagreen; */
             transform-origin: 0 0;
-            background-color: #f00;
         }
 
         .box-right::before {
+            /* background-color: rosybrown; */
             right: 100%;
             bottom: 0;
             transform-origin: 100% 100%;
-            background-color: lightblue;
         }
 
         .box-top::before {
             top: 100%;
             right: 0;
             transform-origin: 100% 0;
-            background-color: lightcoral;
+            /* background-color: salmon; */
         }
 
         .box-bottom::before {
             bottom: 100%;
             left: 0;
             transform-origin: 0 100%;
-            background-color: lightseagreen;
+            /* background-color: slateblue; */
+        }
+
+        .box-right:hover,
+        .box-left:hover,
+        .box-top:hover,
+        .box-bottom:hover,
+        .box-center:hover {
+            transform: translate(0,0);
+            z-index: 1;
+        }
+
+        .box-right:before:hover,
+        .box-left:before:hover,
+        .box-top:before:hover,
+        .box-bottom:before:hover,
+        .box-center:before:hover {
+            width: 100%;
+            height: 100%;
+            transform: none;
+        }
+
+        .hover {
+            background: orange;
+            z-index: -1;
         }
     </style>
 </head>
 
 <body>
-    <div class="box">
-        <div class="box-left">left->right</div>
-        <div class="box-top">top->bottom</div>
-        <div class="box-right">right->left</div>
-        <div class="box-bottom">bottom->top</div>
+    <div class="container">
+        <div class="box-right">right to left</div>
+        <div class="box-left">left to right</div>
+        <div class="box-top">top to bottom</div>
+        <div class="box-bottom">bottom to top</div>
         <div class="hover">Hover Me</div>
     </div>
 </body>
