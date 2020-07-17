@@ -1,20 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
+        div {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: rgb(118, 218, 255);
+            overflow: hidden;
+        }
+
+        div::after,
+        div::before {
+            content: "";
+            /* width: 1200px;
+            height: 1200px; */
             width: 300px;
             height: 300px;
-            background-color: cadetblue;
+            position: absolute;
+            left: 50%;
+            background-color: #fff;
+            position: absolute;
+
+            transform: translate(-50%,0);
+
+            animation-name: rotate;
+            animation-timing-function: linear;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+
+        div::after {
+            bottom: 12vh;
+            opacity: .5;
+            border-radius: 47%;
+            animation-delay: 1s;
+            /* background-color: red; */
+        }
+
+        div::before {
+            bottom: 15vh;
+            border-radius: 45%;
+
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: translate(-50%,0) rotateZ(0deg);
+            }
+
+            50% {
+                transform: translate(-50%,5%) rotateZ(180deg);
+            }
+
+            100% {
+                transform: translate(-50%,0) rotateZ(360deg);
+            }
         }
     </style>
 </head>
+
 <body>
     <div>
 
     </div>
 </body>
+
 </html>
