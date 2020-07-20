@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            font-size: 50px;
+            margin: auto;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .wave {
+            border: 5px solid deeppink;
+            border-radius: 50%;
+            animation: indent 5s infinite linear;
+        }
+
+        div {
+            color: transparent;
+            text-decoration-line: underline;
+            text-decoration-style: wavy;
+            text-decoration-color: deeppink;
+        }
+
+        @keyframes indent {
+            100% {
+                text-indent: -110px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>ABCDEFGHIJKLMNOPQ</div>
+    <div class="wave">ABCDEFGHIJKLMNOPQ</div>
+</body>
+
+</html>
