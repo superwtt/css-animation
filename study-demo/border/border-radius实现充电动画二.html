@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            position: relative;
+            width: 150px;
+            height: 400px;
+            margin: 150px auto;
+        }
+        .header{
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 26px;
+            height: 15px;
+            background-color: rgba(0,0,0,.1);
+            border-radius: 4px 4px 0 0;
+        }
+        .battery{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+            width: 150px;
+            height: 220px;
+            border-radius: 10px;
+            filter: drop-shadow(0 1px 3px rgba(0,0,0,0.22));
+        }
+        .battery-copy{
+          position: absolute;
+          width: 150px;
+          height: 220px;
+          overflow: hidden;
+        }
+        .wave{
+            position: absolute;
+            width: 150px;
+            height: 220px;
+            transform: translateY(100%);
+            background: linear-gradient(#ee0979,#ff6a00);
+
+            animation-name: load;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes load {
+            0%{
+                transform: translateY(100%);
+            }
+            50%{
+                transform: translateY(50%);
+                filter: hue-rotate(200deg);
+            }
+            100%{
+                transform: translateY(0);
+                filter: hue-rotate(250deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"></div>
+        <div class="battery"></div>
+
+        <div class="battery-copy">
+            <div class="wave"></div>
+        </div>
+    </div>
+</body>
+</html>

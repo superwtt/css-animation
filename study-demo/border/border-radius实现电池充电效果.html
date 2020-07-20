@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            width: 150px;
+            margin: 150px auto;
+            /* overflow: hidden; */
+        }
+
+        .battery {
+            height: 220px;
+            border-radius: 8px;
+            box-shadow: 0 0 2px 2px #cdcdcd;
+        }
+
+        .top {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 35px;
+            height: 20px;
+            background: rgba(255, 255, 255, .88);
+            border-radius: 4px 4px 0 0;
+            box-shadow:
+                2px 0 2px -2px #000,
+                -2px 0 2px -2px #000,
+                0 -2px 2px -2px #000;
+            transform: translateX(-50%);
+        }
+
+        .battery-copy{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width:220px;
+            height: 220px;
+            overflow: hidden;
+        }
+        .wave {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,100%);
+            width:150px;
+            height: 220px;
+            background:linear-gradient(#f80759,#bc4e9c);
+
+            animation-name: load;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes load {
+            0% {
+                transform: translate(-50%, 100%);
+            }
+
+            50% {
+                transform: translate(-50%, 50%);
+                filter: hue-rotate(200deg);
+            }
+
+            100% {
+                transform: translate(-50%, 0%);
+                filter: hue-rotate(250deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top"></div>
+        <div class="battery"></div>
+
+        <div class="battery-copy">
+            <div class="wave"></div>
+        </div>
+    </div>
+</body>
+
+</html>
