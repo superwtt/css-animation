@@ -1,11 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container {
+            width: 150px;
+            height: 400px;
+            position: relative;
+            margin: 150px auto;
+        }
+
+        .header {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 28px;
+            height: 15px;
+            border-radius: 4px 4px 0 0;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .battery {
+            position: absolute;
+            width: 150px;
+            height: 220px;
+            background-color: #fff;
+            border-radius: 10px;
+            filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.22));
+        }
+        .battery::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-radius: 0 0 10px 10px;
+            background: linear-gradient(to bottom, #7abcff 0%, #00BCD4 44%, #2196F3 100%);
+            filter: hue-rotate(90deg);
+            animation: boxShadow 10s linear -1s infinite;
+        }
+
+        .battery-copy {
+            position: absolute;
+            width: 150px;
+            height: 220px;
+            overflow: hidden;    
+            /* 如何让波浪动画的部分不遮住电池 */
+        }
+
+        .wave {
+            position: absolute;
+            width: 150px;
+            height: 220px;
+            border-radius: 10px;
+            transform: translateY(0);
+            /* background: linear-gradient(#ee0979, #ff6a00); */
+        }
+
+        .wave::after,
+        .wave::before {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            content: "";
+            width: 400px;
+            height: 400px;
+            background-color: #fff;
+            animation: rotate 10s linear infinite;
+        }
+
+        .wave::after {
+            opacity: 1;
+            border-radius: 48%;
+        }
+
+        .wave::before {
+            opacity: 0.8;
+            border-radius: 40%;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: translateX(-50%) rotateZ(0);
+                bottom: 0;
+            }
+            50% {
+                transform: translateX(-50%) rotateZ(180deg);
+                filter: hue-rotate(0);
+                bottom: 40%;
+            }
+            100% {
+                transform: translateX(-50%) rotateZ(360deg);
+                filter: hue-rotate(0);
+                bottom: 100%;
+            }
+        }
+        @keyframes boxShadow {
+            0% {
+                top: 100%;
+                box-shadow: 0 14px 28px rgba(0, 150, 136, 0.83), 0px 4px 10px rgba(9, 188, 215, 0.4);
+            }
+            40% {
+                top: 60%;
+                box-shadow: 0 14px 28px rgba(0, 150, 136, 0.83), 0px 4px 10px rgba(9, 188, 215, 0.4);
+            }
+
+            100% {
+                top: 0;
+                box-shadow: 0 14px 28px rgba(4, 188, 213, 0), 0 10px 10px rgba(9, 188, 215, 0.4);
+            }
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="header"></div>
+        <div class="battery"></div>
+
+        <div class="battery-copy">
+            <div class="wave"></div>
+        </div>
+    </div>
 </body>
+
 </html>

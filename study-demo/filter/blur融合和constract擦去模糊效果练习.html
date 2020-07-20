@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            border: 1px solid;
+            border-radius: 50%;
+            filter: contrast(20);
+            background-color: #fff;
+        }
+
+        .bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+
+            background-color: #000;
+            filter: contrast(20) blur(6px);
+        }
+
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 80px;
+            transform: translate(-50%, -50%) rotate(0);
+            background-color: blue;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            filter: unset;
+            filter: contrast(20) blur(6px);
+            animation: rotate 5s linear infinite;
+            transform-origin: -100% center;
+        }
+
+        @keyframes rotate {
+            to {
+                transform: translate(-50%,-50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bg"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

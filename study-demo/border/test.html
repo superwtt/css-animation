@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            position: absolute;
+            width: 400px;
+            height: 400px; 
+            background-color: rosybrown;
+        }
+        .battery{
+            position: absolute;
+            width: 200px;
+            height: 100px; 
+            z-index: 99;
+            background-color: rebeccapurple;
+        }
+        .wave{
+            position: absolute;
+            width: 100px;
+            height: 100px; 
+            z-index: 100;
+            background-color: lightcoral;
+        }
+        .wave::after,
+        .wave::before{
+            position: absolute;
+            width: 100px;
+            height: 100px; 
+            /* z-index: 100; */
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="battery"></div>
+        <div class="wave"></div>
+    </div>
+</body>
+</html>
