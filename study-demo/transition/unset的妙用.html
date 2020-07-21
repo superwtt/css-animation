@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            color: red;
+            border: 1px solid #f00;
+        }
+
+        .children {
+            color: green;
+            border: 1px solid green;
+        }
+
+        .unset {
+            color: unset;
+            border: unset;
+        }
+        .container{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+        }
+        /* .left,.right{
+            position: absolute;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+        }
+        .left{
+            left: 0;
+        }
+        .right{
+            right: 0;
+        } */
+        .left,.right{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+        }
+        .right{
+            left: unset;
+            right: 0;
+        }
+        .test{
+            cursor: pointer;
+            width: 200px;
+            height: 200px;
+            background-color: thistle;
+        }
+        .test:hover{
+            transition: width 4s,height 0s;
+            transition-delay: 0  4s;
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="children">children</div>
+        <div class="children unset">children unset</div>
+    </div>
+    <div class="container">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <div class="test"></div>
+</body>
+
+</html>

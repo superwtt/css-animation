@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+
+        div {
+            position: relative;
+            width: 200px;
+            height: 64px;
+            line-height: 64px;
+            /* border: 3px solid #fff; */
+            box-shadow: inset 0 0 0 3px #fff;
+            margin: 50px auto;
+            text-align: center;
+            color: #fff;
+            font-size: 32px;
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+
+        div:hover {
+            color: olivedrab;
+        }
+
+        div::before,
+        div::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            box-sizing: border-box;
+            border: 3px solid transparent;
+        }
+
+        .both:hover:after {
+            transition: width .5s, height .5s;
+            transition-delay: 0s, .5s, .5s;
+            width: 200px;
+            height: 64px;
+            border-top: 3px solid olivedrab;
+            border-right: 3px solid olivedrab;
+        }
+
+        .both:hover::before {
+            transition: width .5s, height .5s, border-bottom-color 0s;
+            transition-delay: .5s, 0s, .5s;
+
+            /* background-color: orange; */
+            width: 200px;
+            height: 64px;
+            border-left: 3px solid olivedrab;
+            border-bottom: 3px solid olivedrab;
+        }
+
+        .rectangle::after {
+            top: unset;
+            left: unset;
+            right: 0;
+            bottom: 0;
+        }
+
+        .rectangle:hover:before {
+            transition: width .25s, height .25s, border-bottom-color 0s;
+            transition-delay: .25s, 0s, .25s;
+            width: 200px;
+            height: 64px;
+            /* background-color: thistle; */
+            border-left: 3px solid olivedrab;
+            border-bottom: 3px solid olivedrab;
+        }
+        .rectangle:hover::after{
+            transition: width .25s, height .25s, border-top-color .25s;
+            transition-delay: 0.75s, 0.5s, 0.75s;
+            
+            width: 200px;
+            height: 64px;
+            border-right: 3px solid olivedrab;
+            border-top: 3px solid olivedrab;
+        }
+
+        .circle{
+            width: 120px;
+            height: 120px;
+            text-align: center;
+            line-height: 120px;
+            border-radius: 50%;
+        }
+        .circle::after,
+        .circle::before{
+            border-radius: 50%;
+        }
+        .circle:hover::before{
+            background-color: tomato;
+            width: 120px;
+            height: 120px;
+            border-color: #00e2ff;
+            transition: border-top-color .25s linear,
+            border-right-color .25s linear,
+            border-bottom-color .25s linear,
+            border-left-color .25s linear;
+            transition-delay: 0s, .25s, .5s, .75s;
+        }
+        .circle:hover:after {
+            width: 120px;
+            /* background-color: thistle; */
+            height: 120px;
+            border-top: 3px solid #00e2ff;
+            transform: rotate(270deg);
+            transition: transform .75s linear;
+            transition-delay: 0s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="both">Both</div>
+    <div class="rectangle">rectangle</div>
+    <div class="circle">circle</div>
+</body>
+
+</html>

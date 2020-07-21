@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .solid {
+            text-decoration-style: solid;
+        }
+
+        .double {
+            text-decoration-style: double;
+        }
+
+        .dotted {
+            text-decoration-style: dotted;
+        }
+
+        .dashed {
+            text-decoration-style: dashed;
+        }
+
+        .wavy {
+            text-decoration-style: wavy;
+        }
+        /* styling for Pen, unrelated to text-decoration-style */
+
+        body {
+            font-family: sans-serif;
+        }
+
+        p {
+            text-decoration: underline;
+            font-size: 2em;
+        }
+
+        div {
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="style">
+        line:
+        <button>underline</button>
+        <button>line-through</button>
+        <button>overline</button>
+    </div>
+    <div class="color">
+        color:
+        <button>black</button>
+        <button>red</button>
+        <button>gray</button>
+    </div>
+    <div class="skip">
+        skip:
+        <button>objects</button>
+        <button>spaces</button>
+        <button>ink</button>
+        <button>edges</button>
+        <button>box-decoration</button>
+        <button>trailing-spaces</button>
+    </div>
+
+    <p class="solid">text-decoration-style: solid;</p>
+    <p class="double">text-decoration-style: double;</p>
+    <p class="dotted">text-decoration-style: dotted;</p>
+    <p class="dashed">text-decoration-style: dashed;</p>
+    <p class="wavy">text-decoration-style: wavy;</p>
+</body>
+
+</html>

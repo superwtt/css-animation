@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            margin: auto;
+            width: 160px;
+            line-height: 160px;
+            text-align: center;
+            font-size: 24px;
+            border: 1px solid;
+        }
+
+        div::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid gold;
+            transition: all .5s;
+            animation: clippath 13s 1 linear;
+        }
+
+
+        @keyframes clippath {
+
+            0%,
+            100% {
+                clip-path: inset(0 0 95% 0);
+            }
+
+            25% {
+                clip-path: inset(0 95% 0 0);
+            }
+
+            50% {
+                clip-path: inset(95% 0 0 0);
+            }
+
+            75% {
+                clip-path: inset(0 0 0 95%);
+            }
+        }
+
+        .bg::before {
+            background: rgba(255, 215, 0, .5);
+        }
+    </style>
+</head>
+
+<body>
+    <div>Hello</div>
+    <div class="bg">示意图</div>
+</body>
+
+</html>
