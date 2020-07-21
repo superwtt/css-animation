@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            transform-style: preserve-3d;
+            perspective: 500px;
+        }
+
+        .reverseRotate {
+            width: 250px;
+            height: 250px;
+            margin: 200px auto;
+
+            animation: reverseRotate 5s linear infinite;
+        }
+
+        .rotate {
+            width: 250px;
+            height: 250px;
+
+            animation: rotate 5s linear infinite;
+        }
+
+        .content {
+            width: 250px;
+            height: 250px;
+            background-color: pink;
+            box-shadow: 0 0 2px 3px #cdcdcd;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateX(0deg) rotateZ(0deg);
+            }
+
+            50% {
+                transform: rotateX(40deg) rotateZ(180deg);
+            }
+
+            100% {
+                transform: rotateX(0deg) rotateZ(360deg);
+            }
+        }
+
+        @keyframes reverseRotate {
+            to{
+                transform: rotateZ(-360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reverseRotate">
+        <div class="rotate">
+            <div class="content">content</div>
+        </div>
+    </div>
+</body>
+
+</html>

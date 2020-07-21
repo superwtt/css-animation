@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .g-container{
+            width: 85px;
+            height: 300px;
+            position: relative;
+            margin:150px auto;
+            border: 1px dashed;
+            transform-origin: center 0;
+            animation: rotate 1.5s cubic-bezier(.5, 0, .5, 1) infinite alternate;
+        }
+        .g-ball{
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #fff, #000);
+            position: absolute;
+            bottom: 0;
+        }
+        @keyframes rotate {
+            to{
+                transform:rotate(90deg) translate(-3vmin, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="g-container">
+        <div class="g-ball"></div>
+    </div>
+</body>
+
+</html>
