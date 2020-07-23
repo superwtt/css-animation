@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;
+            height: 500px;
+            padding: 50px;
+            border: 10px dotted;
+            background-repeat: no-repeat;
+            background-image: url(../images/122.jpg);
+        }
+        .div1{
+           background-origin: border-box;
+        }
+        .div2{
+            background-origin: padding-box;
+        }
+        .div3{
+            background-origin: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+</body>
+</html>
