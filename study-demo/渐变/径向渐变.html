@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 300px;
+            margin-bottom: 20px;
+            border: 1px solid;
+        }
+
+        .radial1 {
+            background: radial-gradient(red, yellow, green);
+        }
+
+        .radial2 {
+            background: radial-gradient(red 5%, yellow 45%, green 60%);
+        }
+
+        .radial3 {
+            background: radial-gradient(circle, red, yellow, green);
+        }
+
+        .radial4 {
+            background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+        }
+
+        .radial5 {
+            background-image: radial-gradient(tan 30%, transparent 0), radial-gradient(tan 30%, transparent 0);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="radial1">
+        默认的径向渐变-颜色节点分布均匀
+    </div>
+    <div class="radial2">
+        颜色节点分布不均匀
+    </div>
+    <div class="radial3">
+        形状
+    </div>
+    <div class="radial4">
+        重复的径向渐变
+    </div>
+    <div class="radial5">
+        波卡尔圆点
+    </div>
+</body>
+
+</html>

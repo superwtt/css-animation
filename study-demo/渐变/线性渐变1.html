@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+            border: 1px solid;
+        }
+
+        .linear1 {
+            background: linear-gradient(#fb3 20%, #58a 80%);
+        }
+
+        .linear2 {
+            background: linear-gradient(#fb3 50%, #58a 50%);
+        }
+
+        .linear3 {
+            background: linear-gradient(#fb3 50%, #58a 0%);
+        }
+
+        .linear4 {
+            background: linear-gradient(#fb3 33.3%, #58a 0%, #58a 66.6%, pink 0);
+        }
+
+        .linear5 {
+            background: linear-gradient(to right, #fb3 50%, #58a 0%);
+        }
+
+        .linear6 {
+            background: linear-gradient(45deg, #fb3 50%, #58a 60%);
+        }
+
+        .linear7 {
+            background: linear-gradient(#fb3 25%, #58a 0%, #58a 50%, #fb3 0%, #fb3 75%, #58a 0);
+        }
+
+        .linear8 {
+            background:
+                linear-gradient(90deg, rgba(200, 0, 0, 0.5) 50%, transparent 0),
+                linear-gradient(rgba(200, 0, 0, 0.5) 50%, transparent 0);
+            background-size: 10px 10px;
+        }
+
+        .linear9 {
+            background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+        }
+
+        .linear10 {
+            background-color: #eee;
+            background-image: linear-gradient(45deg, #bbb 25%, transparent 0),
+                linear-gradient(45deg, transparent 75%, #bbb 0),
+                linear-gradient(45deg, #bbb 25%, transparent 0),
+                linear-gradient(45deg, transparent 75%, #bbb 0);
+            background-position: 0 0, 15px 15px, 15px 15px, 30px 30px;
+            background-size: 30px 30px;
+        }
+
+        .linear11 {
+            border-radius: 50%;
+            background: linear-gradient(to right, transparent 50%, #655 0);
+        }
+
+        .linear11::before {
+            content: "";
+            display: block;
+            height: 100%;
+            margin-left: 50%;
+            transform-origin: left center;
+            transform: rotate(60deg);
+
+            background-color: brown;
+            border-radius: 0 100% 100% 0 / 50%;
+        }
+
+        .linear12 {
+            width: 200px;
+            height: 100px;
+            background: 
+            linear-gradient(-60deg, transparent 20%, #2bbf85 0) bottom right, 
+            linear-gradient(-120deg, transparent 20%, #2bbf85 0) top right;
+            background-size: 100% 50%, 100% 50%;
+            background-repeat: no-repeat, no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="linear1">
+        <p>开始渐变的位置不同</p>
+    </div>
+    <div class="linear2">
+        <p>开始渐变的位置相同</p>
+    </div>
+    <div class="linear3">
+        <p>开始渐变的位置为0</p>
+    </div>
+    <div class="linear4">
+        <p>通过设置0，实现条纹变色</p>
+    </div>
+    <div class="linear5">
+        方向取值为关键词
+    </div>
+    <div class="linear6">
+        方向取值为角度值
+    </div>
+    <div class="linear7">
+        条纹
+    </div>
+    <div class="linear8">
+        复杂条纹-桌布效果
+    </div>
+    <div class="linear9">
+        重复的线性渐变
+    </div>
+    <div class="linear10">
+        棋盘
+    </div>
+    <div class="linear11">
+        圆环
+    </div>
+    <div class="linear12">
+        箭头
+    </div>
+</body>
+
+</html>
