@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin-bottom: 20px;
+        }
+
+        .div1,
+        .div2 {
+            width: 0;
+            height: 0;
+            border: 50px solid;
+        }
+
+        .div1 {
+            border-top-color: gray;
+            border-right-color: pink;
+            border-bottom-color: gray;
+            border-left-color: pink;
+        }
+
+        .div2 {
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+        }
+
+        .div3-0{
+            width: 0;
+            height: 200px;
+            border-left: 50px solid seagreen;
+            border-right: 50px solid sienna;
+            border-top: 50px solid firebrick;
+        }
+
+        .div3-1 {
+            width: 0;
+            height: 0;
+            border-left: 50px solid seagreen;
+            border-right: 50px solid sienna;
+            border-top: 50px solid firebrick;
+        }
+
+        .div3-2 {
+            width: 0;
+            height: 0;
+            border-left: 50px solid seagreen;
+            border-right: 50px solid sienna;
+            border-bottom: 50px solid firebrick;
+        }
+
+        .div3-3 {
+            width: 0;
+            height: 0;
+            border-top: 50px solid seagreen;
+            border-right: 50px solid sienna;
+            border-bottom: 50px solid firebrick;
+        }
+
+        .div3-4 {
+            width: 0;
+            height: 0;
+            border-left: 50px solid seagreen;
+            border-top: 50px solid sienna;
+            border-bottom: 50px solid firebrick;
+        }
+
+        .div4 {
+            position: relative;
+            width: 100px;
+            height: 55px;
+            background: tan;
+        }
+
+        .div4::before {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: -25px;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 25px solid #fc5e5e;
+        }
+
+        .div4::after {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 55px;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 25px solid #fc5e5e;
+        }
+
+        .div5 {
+            position: relative;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 100px solid #fc5e5e;
+            margin-top: 80px;
+        }
+
+        .div5::after {
+            content: "";
+            position: absolute;
+            top: -130px;
+            left: -50px;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid #fc5e5e;
+        }
+
+        .div6 {
+            width: 0px;
+            height: 0px;
+            margin: 50px 0;
+            color: red;
+            position: relative;
+            display: block;
+            border-bottom: 70px solid red;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            transform: rotate(35deg);
+        }
+
+        .div6::before {
+            content: '';
+            width: 0px;
+            height: 0px;
+            margin: 50px 0;
+            color: yellow;
+            position: relative;
+            display: block;
+            border-bottom: 80px solid yellow;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            transform: rotate(-35deg);
+            top: -45px;
+            left: -65px;
+        }
+
+        .div6::after {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            display: block;
+            top: 3px;
+            left: -105px;
+            color: #fc2e5a;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid #fc2e5a;
+            border-left: 100px solid transparent;
+            transform: rotate(-70deg);
+        }
+        .div7{
+            width: 0;
+            height: 0;
+
+            border-left:100px solid seagreen;
+            border-right:100px solid fuchsia;
+            /* border-top:100px solid firebrick; */
+            border-bottom:80px solid rosybrown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3-0"></div>
+    <div class="div3-1"></div>
+    <div class="div3-2"></div>
+    <div class="div3-3"></div>
+    <div class="div3-4"></div>
+    <div class="div4"></div>
+    <div class="div5"></div>
+    <div class="div6"></div>
+
+    <div class="div7"></div>
+</body>
+
+</html>

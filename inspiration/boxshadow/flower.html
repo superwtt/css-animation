@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .container {
+            position: relative;
+        }
+
         .flower {
             position: relative;
             width: 80px;
@@ -14,57 +18,102 @@
             background-color: peachpuff;
             border-radius: 50%;
             z-index: 100;
-            /* transform: rotate(-70deg); */
             box-shadow:
-                0px -60px 0 0 palevioletred, /*上*/
-                55px -20px 0 0 palevioletred, /*右*/
-                -55px -20px 0 0 palevioletred, /*左*/
-                -35px 45px 0 0 palevioletred, /*下左*/
-                35px 45px 0 0 palevioletred /*下右*/
+                0px -60px 0 0 palevioletred,
+                /*上*/
+                55px -20px 0 0 palevioletred,
+                /*右*/
+                -55px -20px 0 0 palevioletred,
+                /*左*/
+                -35px 45px 0 0 palevioletred,
+                /*下左*/
+                35px 45px 0 0 palevioletred;
+            /*下右*/
+            animation: rotate 3s linear infinite;
         }
-        .line{
+
+        .line {
             position: absolute;
             width: 100px;
             height: 200px;
             top: 80px;
-            left: -45px;
+            left: 140px;
             z-index: 99;
             border-radius: 50%;
             border: 1px solid palevioletred;
             border-top-color: transparent;
             border-left-color: transparent;
             border-bottom-color: transparent;
+
         }
+
         .line::before,
-        .line::after{
-           content: "";
-           position: absolute;
-           width: 280px;
-           height: 280px;
-           background-color: mediumseagreen;
-           
+        .line::after {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background-color: mediumseagreen;
+
         }
-        .line::before{
+
+        .line::before {
             top: 2px;
-            left:3px;
+            left: 3px;
             clip-path: inset(35% 35% 35% 35% round 70% 0 70% 0);
-            
+
         }
-        .line::after{
+
+        .line::after {
             top: 2px;
             right: -70px;
             clip-path: inset(35% 35% 35% 35% round 0 70% 0 70%);
         }
+
         @keyframes rotate {
-            
+
+            0%,
+            65% {
+                transform: rotate(0deg);
+            }
+
+            70% {
+                transform: rotate(6deg);
+            }
+
+            75% {
+                transform: rotate(-6deg);
+            }
+
+            80% {
+                transform: rotate(6deg);
+            }
+
+            85% {
+                transform: rotate(-6deg);
+            }
+
+            90% {
+                transform: rotate(6deg);
+            }
+
+            95% {
+                transform: rotate(-6deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="flower">
+    <div class="container">
+        <div class="flower"></div>
         <div class="line"></div>
     </div>
+
 </body>
 
 </html>
