@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 220px;
+            padding: 50px;
+            box-sizing: border-box;
+            margin: auto;
+            text-align: center;
+            animation: rotate 2s linear infinite;
+        }
+
+        .flow {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin: 3px;
+            background-color: #1890ff;
+            border-radius: 20px 20px 0 20px/20px 20px 0 20px;
+            animation: opacity 2s linear infinite;
+        }
+        .flow:nth-child(1){
+            animation-delay: 0;
+        }
+
+        .flow:nth-child(2) {
+            transform: rotate(90deg);
+            animation-delay: .5s;
+        }
+        .flow:nth-child(4) {
+            transform: rotate(180deg);
+            animation-delay: 1s;
+        }
+        .flow:nth-child(3) {
+            transform: rotate(-90deg);
+            animation-delay: 1.5s;
+        }
+        @keyframes rotate {
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes opacity {
+            50%{
+                opacity: 0.2;
+            }
+            0%,100%{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="flow"></div>
+        <div class="flow"></div>
+        <div class="flow"></div>
+        <div class="flow"></div>
+    </div>
+</body>
+
+</html>

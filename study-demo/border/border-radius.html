@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin-bottom: 20px;
+        }
+
+        .div1 {
+            border-radius: 10px;
+        }
+
+        .div2 {
+            border-radius: 10px 20px;
+        }
+
+        .div3 {
+            border-radius: 10px 30px 20px;
+        }
+
+        .div4 {
+            border-radius: 10px 20px 30px 40px;
+        }
+
+        .div5 {
+            border-radius: 100px / 40px;
+        }
+
+        .div6 {
+            width: 120px;
+            height: 160px;
+            /* border-radius: 60px 60px 60px 60px / 100px 100px 60px 60px; */
+            border-radius: 60px / 100px 100px 60px 60px;
+        }
+
+        .div7 {
+            width: 60px;
+            height: 120px;
+            border-radius: 60px 0 0 60px;
+        }
+
+        .div8 {
+            border-radius: 0 0 0 200px;
+        }
+
+        .div9 {
+            height: 100px;
+            border-radius: 100px/100px;
+        }
+
+        .div10 {
+            height: 60px;
+            border-radius: 200px/60px;
+        }
+
+        .div11 {
+            border-radius: 100px 100px 0 100px/ 100px 100px 0 100px;
+        }
+
+        .div13 {
+            width: 100px;
+            height: 50px;
+            background-color: seagreen;
+            border-radius: 50px / 50px 50px 0 0;
+        }
+
+        .div14 {
+            width: 100px;
+            height: 50px;
+            background-color: seagreen;
+            border-radius: 50px / 0 0 50px 50px;
+        }
+
+        .div15 {
+            width: 50px;
+            height: 100px;
+            background-color: seagreen;
+            border-radius: 50px 0 0 50px / 50px;
+        }
+
+        .div16 {
+            width: 50px;
+            height: 100px;
+            background-color: seagreen;
+            border-radius: 0 50px 50px 0 / 50px;
+        }
+
+        .div17 {
+            width: 80px;
+            height: 40px;
+            background-color: darkgoldenrod;
+            border-radius: 20px 0 0 20px/ 20px 0 0 20px;
+        }
+
+        .div18 {
+            width: 80px;
+            height: 40px;
+            background-color: darkgoldenrod;
+            border-radius: 0 20px 20px 0 / 0 20px 20px 0;
+        }
+
+        .div19 {
+            position: relative;
+            width: 120px;
+            height: 80px;
+            margin-top: 50px;
+            transform: rotate(-45deg);
+            background-color: pink;
+            border-radius: 0 40px 40px 0 / 0 40px 40px 0;
+        }
+
+        .div19::after {
+            position: absolute;
+            left: -21px;
+            top: -21px;
+
+            content: "";
+            width: 120px;
+            height: 80px;
+            transform: rotate(-90deg);
+            background-color: pink;
+            border-radius: 0 40px 40px 0 / 0 40px 40px 0;
+        }
+
+        .div20{
+            width: 100px;
+            height: 100px;
+            margin-top: 40px;
+            border-top: 20px solid darkgoldenrod;
+            border-radius: 50%;
+        }
+        .div21{
+            width: 100px;
+            height: 100px;
+            margin-top: 40px;
+            border-top: 20px solid darkgoldenrod;
+            border-radius: 100px 0 0 0;
+            background-color: #fff;
+        }
+        .div22{
+            width: 100px;
+            height: 100px;
+            margin-top: 40px;
+            border-top: 20px solid darkgoldenrod;
+            border-radius: 0 100px 0 0;
+            background-color: #fff;
+        }
+        .div23{
+            width: 100px;
+            height: 100px;
+            margin-top: 40px;
+            border-bottom: 20px solid darkgoldenrod;
+            border-radius: 0 0 100px 0;
+            background-color: #fff;
+        }
+        .div24{
+            width: 100px;
+            height: 100px;
+            margin-top: 40px;
+            border-bottom: 20px solid darkgoldenrod;
+            border-radius: 0 0 0 100px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+    <div class="div5"></div>
+    <div class="div6"></div>
+    <div class="div7"></div>
+    <div class="div8"></div>
+    <div class="div9"></div>
+    <div class="div10"></div>
+    <div class="div11"></div>
+    <div class="div13"></div>
+    <div class="div14"></div>
+    <div class="div15"></div>
+    <div class="div16"></div>
+    <div class="div17"></div>
+    <div class="div18"></div>
+    <div class="div19"></div>
+
+    <!--尾巴造型-->
+    <div class="div20"></div>
+    <div class="div21"></div>
+    <div class="div22"></div>
+    <div class="div23"></div>
+    <div class="div24"></div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg {
+            position: relative;
+            width: 65px;
+            height: 65px;
+            margin: 150px auto;
+            border-radius: 50%;
+            background: #FFDC00;
+        }
+
+        .line {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -34%) rotate(-30deg);
+            width: 5px;
+            height: 40px;
+            background: #19BF75;
+        }
+
+        .line::before {
+            position: absolute;
+            top: 28px;
+            left: -26px;
+            content: "";
+            width: 31px;
+            height: 24px;
+            border-radius: 50%;
+            transform: rotate(25deg);
+            background-color: #19BF75;
+        }
+
+        .line::after {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: 2px;
+            width: 20px;
+            height: 4px;
+            transform: rotate(200deg);
+            border-top: 13px solid #19BF75;
+            border-radius: 52px 0 0 0;
+            box-shadow: -3px 0 0 0 #FFDC00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="line"></div>
+    </div>
+</body>
+
+</html>
