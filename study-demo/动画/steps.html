@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blink {
+            width: 240px;
+            height: 300px;
+            background: url(./timg.png) no-repeat;
+            animation-name: bg;
+            animation-duration: 4s;
+            animation-timing-function: steps(4, end);
+            animation-iteration-count: infinite;
+        }
+        @keyframes bg {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -1000px 0;
+            }
+        }
+
+        #text{
+            font: bold 200% Consolas, Monaco, monospace;
+            border-right: 0.1em solid;
+            width: 16.5em;
+            width: 28ch;
+            white-space: nowrap;
+            overflow: hidden;
+
+            animation: type 5s steps(28,end) 1 forwards,
+            border-blink .5s step-end infinite forwards;
+            
+        }
+        @keyframes  type{
+            from{
+                width: 0;
+            }
+        }
+        @keyframes border-blink {
+            50%{
+                border-color: transparent;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blink"></div>
+    <p id="text">The past is gone and static.</p>
+</body>
+
+</html>

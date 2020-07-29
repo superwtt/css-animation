@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #000;
+        }
+
+        #logo {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -100px;
+            margin-top: -100px;
+            background: url(http://www.mrszhao.com/zb_users/upload/2018/06/stepsanimation/images/bg-logo-long.png) no-repeat 0 0;
+            animation: move 2s steps(23, end) forwards;
+        }
+
+        @keyframes move {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -4600px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="logo"></div>
+</body>
+
+</html>

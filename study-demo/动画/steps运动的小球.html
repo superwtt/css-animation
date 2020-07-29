@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: 1em "microsoft Yahei";
+            color: #333;
+        }
+
+        .wrap {
+            width: 500px;
+            height: 140px;
+            background: url(http://www.mrszhao.com/zb_users/upload/2018/06/20180625162728152991524879459.jpg) no-repeat 0 bottom;
+            margin-bottom: 30px;
+        }
+
+        #ball,
+        #ball1 {
+            width: 100px;
+            height: 100px;
+            background-color: #F63;
+            border-radius: 50%;
+        }
+
+        #ball {
+            animation: move 2s steps(4, start) infinite;
+        }
+
+        #ball1 {
+            animation: move 2s steps(4, end) infinite;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(0px);
+            }
+
+            100% {
+                transform: translateX(400px);
+            }
+        }
+
+
+        
+    </style>
+</head>
+
+<body>
+    <p>start模式</p>
+    <div class="wrap">
+        <div id="ball"></div>
+    </div>
+    <p>end模式</p>
+    <div class="wrap">
+        <div id="ball1"></div>
+    </div>
+</body>
+
+</html>
