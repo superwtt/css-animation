@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
             animation-timing-function: steps(4, end);
             animation-iteration-count: infinite;
         }
+
         @keyframes bg {
             0% {
                 background-position: 0 0;
@@ -24,7 +26,7 @@
             }
         }
 
-        #text{
+        #text {
             font: bold 200% Consolas, Monaco, monospace;
             border-right: 0.1em solid;
             width: 16.5em;
@@ -32,18 +34,40 @@
             white-space: nowrap;
             overflow: hidden;
 
-            animation: type 5s steps(28,end) 1 forwards,
-            border-blink .5s step-end infinite forwards;
-            
+            animation: type 5s steps(28, end) 1 forwards,
+                border-blink .5s step-end infinite forwards;
+
         }
-        @keyframes  type{
-            from{
+
+        @keyframes type {
+            from {
                 width: 0;
             }
         }
+
         @keyframes border-blink {
-            50%{
+            50% {
                 border-color: transparent;
+            }
+        }
+
+        .test {
+            width: 0px;
+            height: 0px;
+            border: 30px ridge;
+            /* border-radius: 50%; */
+            /* transform: scale(.7); */
+            border-color: indigo lime yellow orangered;
+            animation: test 5s 1;
+        }
+
+        @keyframes test {
+            50% {
+                transform: rotate(180deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
             }
         }
     </style>
@@ -52,6 +76,9 @@
 <body>
     <div class="blink"></div>
     <p id="text">The past is gone and static.</p>
+
+
+    <div class="test">123</div>
 </body>
 
 </html>
