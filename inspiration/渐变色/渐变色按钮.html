@@ -37,12 +37,27 @@
             outline: none;
             border: none;
             transition: all .3s;
+            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+            7px 7px 20px 0px rgba(0, 0, 0, .1),
+                4px 4px 5px 0px rgba(0, 0, 0, .1);
         }
         .btn1 {
             background: linear-gradient(0deg, #673ab7 0%, #512da8 100%);
         }
         .btn1:hover{
             background: linear-gradient(0deg, rgba(0, 3, 255, 1) 0%, rgba(2, 126, 251, 1) 100%);
+        }
+        .btn2{
+            background: linear-gradient(0deg, rgba(96, 9, 240, 1) 0%, rgba(129, 5, 240, 1) 100%);
+        }
+        .btn2:hover{
+            box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .5),
+                inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+                inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+        }
+        .btn3{
+            background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
         }
     </style>
 </head>
@@ -51,8 +66,8 @@
     <div class="container">
         <h2>CSS Gradient buttons</h2>
         <button class="button btn1">Hover Me</button>
-        <button class="button">Hover Me</button>
-        <button class="button">Hover Me</button>
+        <button class="button btn2">Hover Me</button>
+        <button class="button btn3">Hover Me</button>
         <button class="button">Hover Me</button>
         <button class="button">Hover Me</button>
         <button class="button">Hover Me</button>
