@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            background: #e0e5ec;
+        }
+
         .container {
             width: 90%;
             margin: auto;
@@ -146,8 +150,11 @@
 
         .btn4 {
             position: relative;
+            padding: 0;
+            line-height: 42px;
             background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
         }
+
         .btn4:hover {
             background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
         }
@@ -157,32 +164,289 @@
             position: absolute;
             top: 0;
             right: 0;
-            left: 0;
-            bottom: 0;
             content: "";
             box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .9),
-            -4px -4px 6px 0 rgba(116, 125, 136, .2),
-            inset -4px -4px 6px 0 rgba(255, 255, 255, .9),
-            inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+                -4px -4px 6px 0 rgba(116, 125, 136, .2),
+                inset -4px -4px 6px 0 rgba(255, 255, 255, .9),
+                inset 4px 4px 6px 0 rgba(116, 125, 136, .2);
 
             transition: all 1s ease;
         }
-        .btn4::before{
+
+        .btn4::before {
             width: .1px;
-            height: 100%;
+            height: 0;
         }
-        .btn4::after{
-            width: 100%;
+
+        .btn4::after {
+            width: 0;
             height: .1px;
         }
 
-        .btn4:hover:before {
+        .btn4:hover::before {
             height: 100%;
         }
 
-        .btn4:hover:after {
+        .btn4:hover::after {
             width: 100%;
         }
+
+        .btn4 span {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn4 span:before,
+        .btn4 span:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .9),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2),
+                inset -4px -4px 6px 0 rgba(255, 255, 255, .9),
+                inset 4px 4px 6px 0 rgba(116, 125, 136, .2);
+            transition: all 0.3s ease;
+        }
+
+        .btn4 span::before {
+            width: .1px;
+            height: 0;
+        }
+
+        .btn4 span::after {
+            width: 0;
+            height: .1px;
+        }
+
+        .btn4 span:hover::before {
+            height: 100%;
+        }
+
+        .btn4 span:hover::after {
+            width: 100%;
+        }
+
+        .btn5 {
+            position: relative;
+            background: linear-gradient(0deg, rgba(255, 27, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
+        }
+
+        .btn5::before,
+        .btn5::after {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 2px;
+            background: #f0094a;
+
+            transition: all .3s;
+        }
+
+        .btn5::before {
+            top: 0;
+            right: 0;
+        }
+
+        .btn5::after {
+            bottom: 0;
+            left: 0;
+        }
+
+        .btn5:hover {
+            background: transparent;
+            box-shadow: none;
+            color: #f0094a;
+        }
+
+        .btn5:hover::before,
+        .btn5:hover::after {
+            width: 100%;
+        }
+
+        .btn6 {
+            position: relative;
+            padding: 0;
+            line-height: 42px;
+            background: rgb(247, 150, 192);
+            background: radial-gradient(circle, rgba(247, 150, 192, 1) 0%, rgba(118, 174, 241, 1) 100%);
+        }
+
+        .btn6:hover {
+            background: transparent;
+            color: #76aef1;
+            box-shadow: none;
+        }
+
+        .btn6 span {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn6 span::after,
+        .btn6 span::before {
+            position: absolute;
+            content: "";
+            transition: all .3s;
+
+            box-shadow: -1px -1px 20px 0 rgba(247, 150, 192, 1),
+                -4px -4px 5px 0 rgba(247, 150, 192, 1),
+                7px 7px 20px 0 rgba(247, 150, 192, 1),
+                4px 4px 5px 0 rgba(247, 150, 192, 1);
+        }
+
+        .btn6::after,
+        .btn6::before {
+            position: absolute;
+            content: "";
+            transition: all .3s;
+
+            box-shadow: -1px -1px 20px 0px #76aef1,
+                -4px -4px 5px 0px #76aef1,
+                7px 7px 20px 0px #76aef1,
+                4px 4px 5px 0px #76aef1;
+        }
+
+        .btn6::before {
+            top: 0;
+            left: 0;
+        }
+
+        .btn6::after {
+            top: 0;
+            right: 0;
+        }
+
+        .btn6 span::before {
+            bottom: 0;
+            right: 0;
+        }
+
+        .btn6 span::after {
+            bottom: 0;
+            left: 0;
+        }
+
+
+        .btn6::before,
+        .btn6 span::before {
+            width: 0;
+            height: .1px;
+        }
+
+        .btn6::after,
+        .btn6 span::after {
+            width: .1px;
+            height: 0;
+        }
+
+        .btn6:hover::before,
+        .btn6 span:hover::before {
+            width: 100%;
+        }
+
+        .btn6:hover::after,
+        .btn6 span:hover::after {
+            height: 100%;
+        }
+
+        .btn7 {
+            padding: 0;
+            line-height: 42px;
+            background: linear-gradient(0deg, rgba(255, 151, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
+        }
+
+        .btn7 span {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn7::after,
+        .btn7::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(251, 75, 2, 1);
+
+            transition: all .3s;
+        }
+        .btn7 span::after,
+        .btn7 span::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(251, 75, 2, 1);
+
+            transition: all .3s;
+        }
+
+        .btn7::after,
+        .btn7 span::after {
+            width: 2px;
+            height: 0;
+        }
+
+        .btn7::before,
+        .btn7 span::before {
+            width: 0;
+            height: 2px;
+        }
+
+        .btn7:hover {
+            background: none;
+            box-shadow: none;
+            color: rgba(251, 75, 2, 1);
+        }
+        .btn7:hover::before,
+        .btn7 span:hover::before{
+            width: 100%;
+        }
+        .btn7:hover::after,
+        .btn7 span:hover::after{
+            height: 100%;
+        }
+
+        .btn8{
+            position: relative;
+            overflow: hidden;
+        }
+        .btn8::after{
+            position: absolute;
+            content: "";
+            top: 0;
+            z-index: -1;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+
+            transition: all 0.3s ease;
+        }
+        .btn8:hover{
+            background: transparent;
+            box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2),
+                inset -4px -4px 6px 0 rgba(255, 255, 255, .5),
+                inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+            color: #fff;
+        }
+        .btn8:hover::after{
+            transform: scale(2) rotate(180deg);
+            box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2),
+                inset -4px -4px 6px 0 rgba(255, 255, 255, .5),
+                inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+        }
+
+
     </style>
 </head>
 
@@ -197,10 +461,14 @@
         <button class="button btn4">
             <span>Hover Me</span>
         </button>
-        <button class="button">Hover Me</button>
-        <button class="button">Hover Me</button>
-        <button class="button">Hover Me</button>
-        <button class="button">Hover Me</button>
+        <button class="button btn5">Hover Me</button>
+        <button class="button btn6">
+            <span>Hover Me</span>
+        </button>
+        <button class="button btn7">
+            <span>Hover Me</span>
+        </button>
+        <button class="button btn8">Hover Me</button>
         <button class="button">Hover Me</button>
         <button class="button">Hover Me</button>
     </div>
