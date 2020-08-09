@@ -374,9 +374,15 @@
             top: 0;
             left: 0;
             background-color: rgba(251, 75, 2, 1);
+            box-shadow:
+                -7px -7px 20px 0px rgba(255, 255, 255, .9),
+                -4px -4px 5px 0px rgba(255, 255, 255, .9),
+                7px 7px 20px 0px rgba(0, 0, 0, .2),
+                4px 4px 5px 0px rgba(0, 0, 0, .3);
 
             transition: all .3s;
         }
+
         .btn7 span::after,
         .btn7 span::before {
             content: "";
@@ -402,23 +408,26 @@
 
         .btn7:hover {
             background: none;
-            box-shadow: none;
+            /* box-shadow: none; */
             color: rgba(251, 75, 2, 1);
         }
+
         .btn7:hover::before,
-        .btn7 span:hover::before{
+        .btn7 span:hover::before {
             width: 100%;
         }
+
         .btn7:hover::after,
-        .btn7 span:hover::after{
+        .btn7 span:hover::after {
             height: 100%;
         }
 
-        .btn8{
+        .btn8 {
             position: relative;
             overflow: hidden;
         }
-        .btn8::after{
+
+        .btn8::after {
             position: absolute;
             content: "";
             top: 0;
@@ -430,7 +439,8 @@
 
             transition: all 0.3s ease;
         }
-        .btn8:hover{
+
+        .btn8:hover {
             background: transparent;
             box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
                 -4px -4px 6px 0 rgba(116, 125, 136, .2),
@@ -438,7 +448,8 @@
                 inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
             color: #fff;
         }
-        .btn8:hover::after{
+
+        .btn8:hover::after {
             transform: scale(2) rotate(180deg);
             box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
                 -4px -4px 6px 0 rgba(116, 125, 136, .2),
@@ -446,7 +457,69 @@
                 inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
         }
 
+        .btn9 {
+            overflow: hidden;
+            position: relative;
+            background: rgb(0, 3, 255);
+            background: linear-gradient(0deg, rgba(2, 126, 251, 1) 0%, rgba(0, 3, 255, 1)100%);
+        }
+        .btn9:hover{
+            background: none;
+            box-shadow: none;
+        }
+        .btn9::after{
+          content: "";  
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: -1;
+          transition: all .3s;
+          -webkit-transform: scale(.1);
+            transform: scale(.1);
+        }
+        .btn9:hover::after{
+            background: rgb(0, 3, 255);
+            background: linear-gradient(0deg, rgba(2, 126, 251, 1) 0%, rgba(0, 3, 255, 1)100%);
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        .btn10{
+            overflow: hidden;
+            position: relative;
+            background: rgb(251, 33, 117);
+            background: linear-gradient(0deg, rgba(251, 33, 117, 1) 0%, rgba(234, 76, 137, 1) 100%);
+        }
+        .btn10::after{
+            content: "";
+            position: absolute;
+            top: -180px;
+            left: 0;
+            width: 30px;
+            height: 100%;
+            background-color: #fff;
 
+            animation: opacity 3s ease-in-out infinite;
+        }
+        @keyframes opacity {
+            0%{
+                opacity: 0;
+                transform: scale(0) rotate(45deg);
+            }
+            80%{
+                opacity: 0.5;
+                transform: scale(0) rotate(45deg);
+            }
+            81%{
+                opacity: 1;
+                transform: scale(4) rotate(45deg);
+            }
+            100%{
+                opacity: 0;
+                transform: scale(50) rotate(45deg);
+            }
+        }
     </style>
 </head>
 
@@ -469,8 +542,8 @@
             <span>Hover Me</span>
         </button>
         <button class="button btn8">Hover Me</button>
-        <button class="button">Hover Me</button>
-        <button class="button">Hover Me</button>
+        <button class="button btn9">Hover Me</button>
+        <button class="button btn10">Hover Me</button>
     </div>
 </body>
 
