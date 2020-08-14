@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin-bottom: 50px;
+        }
+        span {
+            display: inline-block;
+            width: 200px;
+            height: 100px;
+            font-size: 48px;
+            border: 1px solid;
+        }
+        p{
+            font-size: 20px;
+        }
+        .span1 {
+            box-shadow: 25px 25px 20px #000;
+        }
+
+        .span2 {
+            text-shadow: 10px 10px 5px #000;
+        }
+
+        .span3 {
+            filter: drop-shadow(10px 10px 2px #000);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span class="span1">张</span>
+        <p>box-shadow</p>
+    </div>
+    <div>
+        <span class="span2">张</span>
+        <p>text-shadow</p>
+    </div>
+    <div>
+        <span class="span3">张</span>
+        <p>drop-shadow</p>
+    </div>
+</body>
+
+</html>

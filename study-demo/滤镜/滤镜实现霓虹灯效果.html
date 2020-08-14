@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .wrap {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .wrap::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            box-shadow: inset 0px 0px 49px 150px rgba(0, 0, 0, 0.5);
+        }
+
+
+        .wrap:hover img {
+            animation: background 2.5s alternate infinite;
+        }
+
+        .wrap:hover h1 {
+            animation: neon 2.5s alternate infinite;
+        }
+
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.05;
+        }
+
+        h1 {
+            white-space: nowrap;
+            background-image: url(https://live.staticflickr.com/65535/50214532642_2b85547cbc_h.jpg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            z-index: 10;
+            margin: 0;
+            font-family: "Noto Sans JP", sans-serif;
+            font-size: 10rem;
+            font-weight: 900;
+            filter: blur(1px);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            // color: rgba(0,0,0,0);
+            -webkit-text-stroke: 2px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 4px;
+            -webkit-text-stroke-color: #ec008c;
+            // animation: neon 2.5s alternate infinite;
+
+
+        }
+
+        @keyframes neon {
+
+            0%,
+            19%,
+            21%,
+            23%,
+            25%,
+            54%,
+            56%,
+            100% {
+                text-shadow:
+                    0 0 5px #ec008c,
+                    0 0 10px #ec008c,
+                    0 0 15px #ec008c,
+                    0 0 20px #ec008c,
+                    0 0 25px #ec008c,
+                    0 0 30px #ec008c,
+                    0 0 35px #fff;
+                filter: blur(2px);
+                -webkit-text-stroke: 2px #6b0ce8;
+                -webkit-text-fill-color: rgba(0, 0, 0, 0.9);
+            }
+
+            20%,
+            24%,
+            55% {
+                text-shadow: none;
+                text-stroke: none;
+            }
+        }
+
+        @keyframes background {
+
+            0%,
+            19%,
+            21%,
+            23%,
+            25%,
+            54%,
+            56%,
+            100% {
+                opacity: 0.5;
+            }
+
+            20%,
+            24%,
+            55% {
+                opacity: 0.1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <img src="https://live.staticflickr.com/65535/50214532642_2b85547cbc_h.jpg" />
+        <h1>ネオ&#183;東京</h1>
+    </div>
+</body>
+
+</html>
