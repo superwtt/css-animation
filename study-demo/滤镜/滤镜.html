@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        section {
+            float: left;
+            width: 20%;
+            height: 200px;
+            padding: 10px;
+            margin-bottom: 150px;
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.3s linear;
+        }
+        section:nth-child(1){
+            filter: grayscale(80%);
+        }
+        section:nth-child(2){
+            filter: sepia(80%);
+        }
+        section:nth-child(3){
+            filter: saturate(200%);
+        }
+        section:nth-child(4){
+            filter: hue-rotate(215deg);
+        }
+        section:nth-child(5){
+            filter: invert(86%);
+        }
+        section:nth-child(6){
+            filter: opacity(80%);
+        }
+        section:nth-child(7){
+            filter: brightness(80%);
+        }
+        section:nth-child(8){
+            filter: contrast(160%);
+        }
+        section:nth-child(9){
+            filter: blur(10px);
+        }
+        section:nth-child(10){
+            filter:drop-shadow(-25px 25px 25px rgba(26,58,70,0.7)); 
+            /* 可以生成不规则阴影，比如 张 这个字的阴影 */
+        }
+        section:hover{
+            filter: none;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section>
+            <img src="../images/demo.jpg" alt="">
+            <p>grayscale灰度</p>
+        </section>
+        <section>
+            <img src="../images/demo.jpg" alt="">
+            <p>sepia褐色</p>
+        </section>
+        <section>
+            <img src="../images/demo.jpg" alt="">
+            <p>saturate饱和度</p>
+        </section>
+        <section>
+            <img src="../images/demo.jpg" alt="">
+            <p>hue-rotate色相旋转</p>
+        </section>
+        <section>
+            <img src="../images/demo.jpg" alt="">
+            <p>invert反色</p>
+        </section>
+        <section>
+            <img src="../images/demo.jpg" alt="">
+            <p>opacity透明度</p>
+        </section>
+        <section>
+            <img src="../images/demo.jpg" alt="">
+            <p>brightness亮度</p>
+        </section>
+        <section>
+            <img src="../images/demo.jpg" alt="">
+            <p>contrast对比度</p>
+        </section>
+        <section>
+            <img src="../images/demo.jpg" alt="">
+            <p>blur高斯模糊</p>
+        </section>
+        <section>
+            <img src="../images/demo.jpg" alt="">
+            <p>drop-shadow不规则阴影</p>
+        </section>
+    </div>
+</body>
+
+</html>
