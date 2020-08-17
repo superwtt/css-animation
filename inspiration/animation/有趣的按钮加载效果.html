@@ -330,6 +330,22 @@
             border-color: rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.25) rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.5);
             animation: rotate 1s linear infinite;
         }
+        .loader18{
+            position: relative;
+           border-bottom-color: transparent;
+           animation: rotateBack 1s linear infinite;
+        }
+        .loader18::after{
+           content: "";
+           position: absolute;
+           left: -4px;
+           bottom: -11px;
+           transform: rotate(-20deg);
+           border: 11px solid #fff;
+           border-left-color: transparent;
+           border-right-color: transparent;
+           border-bottom-color: transparent;
+        }
         
 
         @keyframes rotate {
@@ -422,7 +438,9 @@
     <section>
         <div class="loader loader17"></div>
     </section>
-    <section></section>
+    <section>
+        <div class="loader loader18"></div>
+    </section>
 </body>
 
 </html>
