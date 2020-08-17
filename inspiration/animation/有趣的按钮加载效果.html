@@ -31,20 +31,21 @@
         .loader {
             width: 48px;
             height: 48px;
-            border: 5px solid #FFF;
+            border: 3px solid #FFF;
             border-radius: 50%;
             display: inline-block;
         }
 
         .loader1 {
             position: relative;
+            border: 5px solid #FFF;
             border-bottom-color: #FF3D00;
             animation: rotate 1s linear infinite;
         }
 
         .loader2 {
             position: relative;
-            border: 3px solid #fff;
+
             animation: rotate 1s linear infinite;
         }
 
@@ -64,7 +65,7 @@
         .loader3,
         .loader4 {
             position: relative;
-            border: 3px solid #fff;
+
             animation: rotate 1s linear infinite;
         }
 
@@ -133,7 +134,7 @@
 
         .loader7 {
             position: relative;
-            border: 3px solid #fff;
+
             animation: rotate 1s linear infinite;
         }
 
@@ -167,14 +168,57 @@
             margin-top: -5px;
         }
 
-        .loader9 {
+        .loader9,
+        .loader10 {
             position: relative;
-            border: 4px solid #FFF;
+
             border-top-color: transparent;
             animation: rotate 1s linear infinite;
         }
 
-        .loader9::after {
+        .loader9::after,
+        .loader10::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            border: 3px solid #FF3D00;
+            border-bottom-color: transparent;
+            animation: rotateBack .5s linear infinite;
+        }
+
+        .loader10::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            border: 2px solid #fff;
+            border-bottom-color: transparent;
+            animation: rotate 1.5s linear infinite;
+        }
+
+        .loader11 {
+            position: relative;
+            border: 3px solid #fff;
+            border-style: solid solid dotted dotted;
+            animation: rotate 2s linear infinite;
+        }
+
+        .loader11::after {
             content: "";
             position: absolute;
             left: 0;
@@ -186,10 +230,107 @@
             border-radius: 50%;
             width: 20px;
             height: 20px;
-            border: 4px solid #FF3D00;
-            border-bottom-color: transparent;
-            animation: rotateBack .5s linear infinite;
+            border: 3px solid #FF3D00;
+            border-style: solid solid dotted;
+            animation: rotateBack 1s linear infinite;
         }
+
+        .loader12 {
+            position: relative;
+            animation: rotate 1s linear infinite;
+        }
+
+        .loader12::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -1px;
+            width: 24px;
+            height: 3px;
+            transform-origin: right center;
+            background-color: #FF3D00;
+        }
+
+        .loader13 {
+            position: relative;
+            border: none;
+            display: inline-block;
+        }
+
+        .loader13::after,
+        .loader13::before {
+            content: '';
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            animation: animate 2s linear infinite;
+        }
+
+        .loader13::after {
+            animation-delay: 1s;
+        }
+
+        .loader14 {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: inline-block;
+            border: none;
+            border-top: 3px solid #FFF;
+            border-right: 3px solid transparent; 
+            /* 小尾巴效果 */
+            animation: rotate 1s linear infinite;
+        }
+
+        .loader15{
+            position: relative;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: inline-block;
+            border: none;
+            border-top: 4px solid #FFF;
+            border-right: 4px solid transparent; 
+            /* 小尾巴效果 */
+            animation: rotate 1s linear infinite;
+        }
+        .loader15::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+
+            border-bottom: 4px solid #FF3D00;
+            border-left: 4px solid transparent;
+        }
+        .loader16{
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: inline-block;
+            border: none;
+            border-top: 4px solid #FF3D00;
+            border-bottom: 4px solid #FF3D00;
+            border-left: 4px solid transparent; 
+            border-right: 4px solid transparent; 
+            /* 小尾巴效果 */
+            animation: rotate 1s linear infinite;
+        }
+        .loader17{
+            border: 10px solid;
+            border-color: rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.25) rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.5);
+            animation: rotate 1s linear infinite;
+        }
+        
 
         @keyframes rotate {
             0% {
@@ -208,6 +349,18 @@
 
             100% {
                 transform: rotate(-360deg)
+            }
+        }
+
+        @keyframes animate {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
             }
         }
     </style>
@@ -245,14 +398,30 @@
     <section>
         <div class="loader loader9"></div>
     </section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
+    <section>
+        <div class="loader loader10"></div>
+    </section>
+    <section>
+        <div class="loader loader11"></div>
+    </section>
+    <section>
+        <div class="loader loader12"></div>
+    </section>
+    <section>
+        <div class="loader loader13"></div>
+    </section>
+    <section>
+        <div class="loader loader14"></div>
+    </section>
+    <section>
+        <div class="loader loader15"></div>
+    </section>
+    <section>
+        <div class="loader loader16"></div>
+    </section>
+    <section>
+        <div class="loader loader17"></div>
+    </section>
     <section></section>
 </body>
 
