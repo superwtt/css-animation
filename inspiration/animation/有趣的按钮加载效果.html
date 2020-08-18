@@ -283,12 +283,12 @@
             display: inline-block;
             border: none;
             border-top: 3px solid #FFF;
-            border-right: 3px solid transparent; 
+            border-right: 3px solid transparent;
             /* 小尾巴效果 */
             animation: rotate 1s linear infinite;
         }
 
-        .loader15{
+        .loader15 {
             position: relative;
             width: 48px;
             height: 48px;
@@ -296,11 +296,12 @@
             display: inline-block;
             border: none;
             border-top: 4px solid #FFF;
-            border-right: 4px solid transparent; 
+            border-right: 4px solid transparent;
             /* 小尾巴效果 */
             animation: rotate 1s linear infinite;
         }
-        .loader15::after{
+
+        .loader15::after {
             content: '';
             position: absolute;
             left: 0;
@@ -312,7 +313,8 @@
             border-bottom: 4px solid #FF3D00;
             border-left: 4px solid transparent;
         }
-        .loader16{
+
+        .loader16 {
             width: 48px;
             height: 48px;
             border-radius: 50%;
@@ -320,33 +322,45 @@
             border: none;
             border-top: 4px solid #FF3D00;
             border-bottom: 4px solid #FF3D00;
-            border-left: 4px solid transparent; 
-            border-right: 4px solid transparent; 
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
             /* 小尾巴效果 */
             animation: rotate 1s linear infinite;
         }
-        .loader17{
+
+        .loader17 {
             border: 10px solid;
             border-color: rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.25) rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.5);
             animation: rotate 1s linear infinite;
         }
-        .loader18{
+
+        .loader18 {
             position: relative;
-           border-bottom-color: transparent;
-           animation: rotateBack 1s linear infinite;
+            border-bottom-color: transparent;
+            animation: rotateBack 1s linear infinite;
         }
-        .loader18::after{
-           content: "";
-           position: absolute;
-           left: -4px;
-           bottom: -11px;
-           transform: rotate(-20deg);
-           border: 11px solid #fff;
-           border-left-color: transparent;
-           border-right-color: transparent;
-           border-bottom-color: transparent;
+
+        .loader18::after {
+            content: "";
+            position: absolute;
+            left: -4px;
+            bottom: -11px;
+            transform: rotate(-20deg);
+            border: 11px solid #fff;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
         }
-        
+
+        .loader19 {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: inline-block;
+            border: none;
+            background-color: #f00;
+            animation: animate2 10s linear infinite;
+        }
 
         @keyframes rotate {
             0% {
@@ -379,10 +393,32 @@
                 opacity: 0;
             }
         }
+
+        @keyframes animate1 {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        @keyframes animate2 {
+            0% {
+                box-shadow: -48px 0 0 0 #fff inset; 
+                /* 改变内投影实现移动效果 */
+            }
+
+            100% {
+                box-shadow: 48px 0 0 0 #fff inset;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <h2>灵感来源于codepen</h2>
     <section>
         <div class="loader loader1"></div>
     </section>
@@ -440,6 +476,9 @@
     </section>
     <section>
         <div class="loader loader18"></div>
+    </section>
+    <section>
+        <div class="loader loader19"></div>
     </section>
 </body>
 
