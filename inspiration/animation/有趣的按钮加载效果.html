@@ -361,6 +361,40 @@
             background-color: #f00;
             animation: animate2 10s linear infinite;
         }
+        .loader20{
+            position: relative;
+            background: #fff;
+        }
+        .loader20::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border:24px solid #FF3D00;
+            border-top-color: transparent;
+            border-left: transparent;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            animation: rotate 2s linear infinite;
+        }
+        .loader21{
+            position: relative;
+            background: #fff;
+            animation: rotate 2s linear infinite;
+        }
+        .loader21::after{
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: 10px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #FF3D00;
+            box-shadow: 25px 2px 0 0 #FF3D00, 10px 22px 0 0 #FF3D00;
+        }
 
         @keyframes rotate {
             0% {
@@ -479,6 +513,12 @@
     </section>
     <section>
         <div class="loader loader19"></div>
+    </section>
+    <section>
+        <div class="loader loader20"></div>
+    </section>
+    <section>
+        <div class="loader loader21"></div>
     </section>
 </body>
 
