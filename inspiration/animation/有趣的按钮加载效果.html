@@ -424,7 +424,21 @@
             border-left-color: transparent;
         }
         .loader23{
-            
+           position: relative;
+           border-top-color: transparent;
+           border-bottom-color: transparent;
+           animation: rotate 2s linear infinite;
+        }
+        .loader23::after{
+           content: "";
+           border-radius: 50%;
+           position: absolute;
+           left: 50%;
+           top: 50%;
+           transform: translate(-50%,-50%);
+           border: 25px solid rgba(255, 255, 255, 0.5);
+           border-top-color: transparent;
+           border-bottom-color: transparent;
         }
 
         @keyframes rotate {
@@ -558,6 +572,9 @@
     </section>
     <section>
         <div class="loader loader23"></div>
+    </section>
+    <section>
+        <div class="loader loader24"></div>
     </section>
 </body>
 
