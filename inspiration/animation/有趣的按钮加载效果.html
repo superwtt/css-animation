@@ -464,7 +464,7 @@
             background-color: #fff;
         }
         .loader25{
-            animation: rotate 2s linear infinite;
+            animation: rotateRevision .6s linear infinite alternate;
         }
 
 
@@ -518,6 +518,15 @@
 
             100% {
                 box-shadow: 48px 0 0 0 #fff inset;
+            }
+        }
+        @keyframes rotateRevision {
+            0% {
+                transform: scale(1) rotate(0deg)
+            }
+
+            100% {
+                transform: scale(0) rotate(360deg)
             }
         }
     </style>
