@@ -468,7 +468,23 @@
             /* 反向旋转 */
         }
         .loader26{
-            animation: rotate .6s linear infinite alternate;
+            animation: rotate 1s linear infinite;
+        }
+        .loader26::after,
+        .loader26::before{
+            animation: scale 1s infinite ease-in-out;
+        }
+        
+        .loader26::before{
+            animation-delay: .5s;
+        }
+        .loader27::after,
+        .loader27::before{
+            transform: scale(0.5) translate(0, 0);
+            animation: translate 2s linear ease-in-out;   
+        }
+        .loader27::before{
+            transform: scale(0.5) translate(-24px, -24px);
         }
 
 
@@ -531,6 +547,19 @@
 
             100% {
                 transform: scale(0) rotate(360deg)
+            }
+        }
+        @keyframes scale {
+            0%,100%{
+                transform: scale(0);
+            }
+            50%{
+                transform: scale(1);
+            }
+        }
+        @keyframes translate {
+            50% {
+                transform: scale(1) translate(-50%, -50%)
             }
         }
     </style>
@@ -621,6 +650,9 @@
     </section>
     <section>
         <div class="loader loader24 loader26"></div>
+    </section>
+    <section>
+        <div class="loader loader24 loader27"></div>
     </section>
 </body>
 
