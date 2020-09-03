@@ -524,6 +524,21 @@
             box-shadow: -24px 0 #fff, 24px 0 #fff;
             animation: boxShadowExpland2 2s linear infinite;
         }
+        .loader30{
+            border: none;
+            width: 20px;
+            height: 20px;
+            animation: rotate 2s ease-in-out infinite;
+        }
+        .loader31{
+            border: none;
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            border-radius: 50%;
+            color: #ffffff;
+            animation: boxShadowExpland3 1s linear infinite alternate;
+        }
 
 
         @keyframes rotate {
@@ -633,6 +648,23 @@
                 box-shadow: -24px 0 #ffffff,24px 0 #FF3D00;
             }
         }
+        @keyframes boxShadowExpland3{
+            0% {
+                box-shadow: -38px -6px, -14px 6px, 14px -6px
+            }
+
+            33% {
+                box-shadow: -38px 6px, -14px -6px, 14px 6px
+            }
+
+            66% {
+                box-shadow: -38px -6px, -14px 6px, 14px -6px
+            }
+
+            100% {
+                box-shadow: -38px 6px, -14px -6px, 14px 6px
+            }
+        }
     </style>
 </head>
 
@@ -730,6 +762,12 @@
     </section>
     <section>
         <div class="loader loader29"></div>
+    </section>
+    <section>
+        <div class="loader loader30"></div>
+    </section>
+    <section>
+        <div class="loader loader31"></div>
     </section>
 </body>
 
