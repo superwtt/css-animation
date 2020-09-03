@@ -510,10 +510,19 @@
             height: 20px;
             background: #fff;
             border-radius: 50%;
-            box-shadow: 
+            /* box-shadow: 
              -20px 0 0 0 rgba(255, 255, 255, 1),
-             20px 0 0 0 rgba(255, 255, 255, 1);
+             20px 0 0 0 rgba(255, 255, 255, 1); */
              animation: boxShadowExpland 1s infinite linear alternate;
+        }
+        .loader29{
+            border: none;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: -24px 0 #fff, 24px 0 #fff;
+            animation: boxShadowExpland2 2s linear infinite;
         }
 
 
@@ -610,6 +619,20 @@
 
             } */
         }
+        @keyframes boxShadowExpland2 {
+            33%{
+                background: #fff;
+                box-shadow: -24px 0 #FF3D00,24px 0 #ffffff;
+            }
+            66%{
+                background: #FF3D00;
+                box-shadow: -24px 0 #ffffff,24px 0 #ffffff;
+            }
+            100%{
+                background: #fff;
+                box-shadow: -24px 0 #ffffff,24px 0 #FF3D00;
+            }
+        }
     </style>
 </head>
 
@@ -704,6 +727,9 @@
     </section>
     <section>
         <div class="loader loader28"></div>
+    </section>
+    <section>
+        <div class="loader loader29"></div>
     </section>
 </body>
 
