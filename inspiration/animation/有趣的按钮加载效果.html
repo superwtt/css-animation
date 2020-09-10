@@ -544,6 +544,17 @@
             box-shadow: -24px 0,24px 0;
             animation: rotate 2s ease-in-out infinite;
         }
+        .loader33{
+            border: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            color: #fff;
+            left: -100px;
+            animation: boxShadowExpland4 2s linear infinite;
+        }
 
 
         @keyframes rotate {
@@ -670,6 +681,70 @@
                 box-shadow: -38px 6px, -14px -6px, 14px 6px
             }
         }
+        @keyframes boxShadowExpland4{
+            0% {
+                box-shadow: 0px 0 rgba(255,255,255, 0),
+                    0px 0 rgba(255,255,255, 0),
+                    0px 0 rgba(255,255,255, 0),
+                    0px 0 rgba(255,255,255, 0);
+            }
+
+            12% {
+                box-shadow: 100px 0 rgba(255,255,255, 1),
+                    0px 0 rgba(255,255,255, 0),
+                    0px 0 rgba(255,255,255, 0),
+                    0px 0 rgba(255,255,255, 0);
+            }
+
+            25% {
+                box-shadow: 110px 0 rgba(255,255,255, 1),
+                    100px 0 rgba(255,255,255, 1),
+                    0px 0 rgba(255,255,255, 0),
+                    0px 0 rgba(255,255,255, 0);
+            }
+
+            36% {
+                box-shadow: 120px 0 rgba(255,255,255, 1),
+                    110px 0 rgba(255,255,255, 1),
+                    100px 0 rgba(255,255,255, 1),
+                    0px 0 rgba(255,255,255, 0);
+            }
+
+            50% {
+                box-shadow: 130px 0 rgba(255,255,255, 1),
+                    120px 0 rgba(255,255,255, 1),
+                    110px 0 rgba(255,255,255, 1),
+                    100px 0 rgba(255,255,255, 1);
+            }
+
+            62% {
+                box-shadow: 200px 0 rgba(255,255,255, 0),
+                    130px 0 rgba(255,255,255, 1),
+                    120px 0 rgba(255,255,255, 1),
+                    110px 0 rgba(255,255,255, 1);
+            }
+
+            75% {
+                box-shadow: 200px 0 rgba(255,255,255, 0),
+                    200px 0 rgba(255,255,255, 0),
+                    130px 0 rgba(255,255,255, 1),
+                    120px 0 rgba(255,255,255, 1);
+            }
+
+            87% {
+                box-shadow: 200px 0 rgba(255,255,255, 0),
+                    200px 0 rgba(255,255,255, 0),
+                    200px 0 rgba(255,255,255, 0),
+                    130px 0 rgba(255,255,255, 1);
+            }
+
+            100% {
+                box-shadow: 200px 0 rgba(255,255,255, 0),
+                    200px 0 rgba(255,255,255, 0),
+                    200px 0 rgba(255,255,255, 0),
+                    200px 0 rgba(255,255,255, 0);
+            }
+        }
     </style>
 </head>
 
@@ -773,6 +848,9 @@
     </section>
     <section>
         <div class="loader loader32"></div>
+    </section>
+    <section>
+        <div class="loader loader33"></div>
     </section>
 </body>
 
