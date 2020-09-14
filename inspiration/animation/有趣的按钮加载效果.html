@@ -600,7 +600,7 @@
             color: #fff;
             animation: boxShadowExpland6 2s linear infinite alternate;
         }
-        .loader36,.loader37,.loader38{
+        .loader36,.loader37,.loader38,.loader39{
             border: none;
         }
         .loader36::after,
@@ -654,6 +654,26 @@
             animation-direction: alternate-reverse;
         }
         .loader38::before{
+            border-color: #fff;
+        }
+
+        .loader39::after,
+        .loader39::before{
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            border: 2px solid;
+            animation: animloader39 4s ease-in-out infinite alternate;
+            /* animloader39与rotate的区别 */
+        }
+        .loader39::after{
+            /* 利用alternate-reverse实现反向旋转 */
+            border-color: #FF3D00;
+            animation-direction: alternate-reverse;
+        }
+        .loader39::before{
             border-color: #fff;
         }
 
@@ -971,6 +991,27 @@
                 opacity: 0;
             }
         }
+        @keyframes animloader39 {
+            0% {
+                transform: rotate(0)
+            }
+
+            25% {
+                transform: rotate(90deg)
+            }
+
+            50% {
+                transform: rotate(180deg)
+            }
+
+            75% {
+                transform: rotate(270deg)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
         
     </style>
 </head>
@@ -1093,6 +1134,9 @@
     </section>
     <section>
         <div class="loader loader38"></div>
+    </section>
+    <section>
+        <div class="loader loader39"></div>
     </section>
 </body>
 
