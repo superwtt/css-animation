@@ -600,7 +600,7 @@
             color: #fff;
             animation: boxShadowExpland6 2s linear infinite alternate;
         }
-        .loader36{
+        .loader36,.loader37,.loader38{
             border: none;
         }
         .loader36::after,
@@ -618,6 +618,42 @@
             animation-delay: 1s;
         }
         .loader36::before{
+            border-color: #fff;
+        }
+        .loader37::after,
+        .loader37::before{
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            border: 2px solid;
+            animation: animloader37 2s ease-in-out infinite;
+        }
+        .loader37::after{
+            border-color: #FF3D00;
+            animation-delay: 1s;
+        }
+        .loader37::before{
+            border-color: #fff;
+        }
+
+        .loader38::after,
+        .loader38::before{
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            border: 2px solid;
+            animation: rotate 2s ease-in-out infinite alternate;
+        }
+        .loader38::after{
+            /* 利用alternate-reverse实现反向旋转 */
+            border-color: #FF3D00;
+            animation-direction: alternate-reverse;
+        }
+        .loader38::before{
             border-color: #fff;
         }
 
@@ -923,6 +959,18 @@
                 -38px 0 0 0
             }
         }
+        @keyframes animloader37 {
+            /* ease-in-out配合scale可以实现抖动的效果 */
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
         
     </style>
 </head>
@@ -1039,6 +1087,12 @@
     </section>
     <section>
         <div class="loader loader36"></div>
+    </section>
+    <section>
+        <div class="loader loader37"></div>
+    </section>
+    <section>
+        <div class="loader loader38"></div>
     </section>
 </body>
 
