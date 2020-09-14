@@ -600,7 +600,26 @@
             color: #fff;
             animation: boxShadowExpland6 2s linear infinite alternate;
         }
-
+        .loader36{
+            border: none;
+        }
+        .loader36::after,
+        .loader36::before{
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            border: 2px solid;
+            animation: rotate 2s ease-in-out infinite;
+        }
+        .loader36::after{
+            border-color: #FF3D00;
+            animation-delay: 1s;
+        }
+        .loader36::before{
+            border-color: #fff;
+        }
 
         @keyframes rotate {
             0% {
