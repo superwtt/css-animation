@@ -698,7 +698,6 @@
         .loader39::after {
             /* 利用alternate-reverse实现反向旋转 */
             border-color: #FF3D00;
-
         }
 
         .loader39::before {
@@ -707,6 +706,39 @@
             border-color: #fff;
             animation: rotate 1s linear infinite;
         }
+
+        .loader40,.loader42{
+            width: 48px;
+            height: 48px;
+            background: #fff;
+        }
+        .loader40{
+            animation: filpX 2s linear infinite;
+        }
+        .loader42{
+            animation: animation42 1s linear infinite alternate;
+        }
+        
+
+        .loader41{
+            position: relative;
+            width: 48px;
+            height: 48px;
+            border: 2px solid #fff;
+            overflow: hidden;
+        }
+        .loader41::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 48px;
+            height: 48px;
+            background-color: #fff;
+            animation: fill 2s ease-in-out infinite alternate;
+        }
+
+
 
         @keyframes rotate {
             0% {
@@ -1047,6 +1079,38 @@
                 transform: rotate(360deg)
             }
         }
+        @keyframes filpX {
+            0% {
+                transform: perspective(200px) rotateX(0deg) rotateY(0deg);
+            }
+
+            50% {
+                transform: perspective(200px) rotateX(-180deg) rotateY(0deg);
+            }
+
+            100% {
+                transform: perspective(200px) rotateX(-180deg) rotateY(-180deg)
+            }
+        }
+        @keyframes fill {
+            0%{
+                transform: translateY(110%);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+        @keyframes animation42 {
+            0%{
+                transform: rotate(0) scale(0.1);
+            }
+            50%{
+                transform: rotate(180deg) scale(0.5);
+            }
+            100%{
+                transform: rotate(360deg) scale(1);
+            }
+        }
     </style>
 </head>
 
@@ -1170,8 +1234,16 @@
         <div class="loader loader38"></div>
     </section>
     <section>
-        <div class="loader loader39">
-        </div>
+        <div class="loader loader39"></div>
+    </section>
+    <section>
+        <div class="loader40"></div>
+    </section>
+    <section>
+        <div class="loader41"></div>
+    </section>
+    <section>
+        <div class="loader42"></div>
     </section>
 </body>
 
