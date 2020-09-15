@@ -590,7 +590,8 @@
             color: #fff;
             animation: boxShadowExpland5 2s linear infinite;
         }
-        .loader35{
+
+        .loader35 {
             border: none;
             width: 10px;
             height: 10px;
@@ -600,11 +601,16 @@
             color: #fff;
             animation: boxShadowExpland6 2s linear infinite alternate;
         }
-        .loader36,.loader37,.loader38,.loader39{
+
+        .loader36,
+        .loader37,
+        .loader38,
+        .loader39 {
             border: none;
         }
+
         .loader36::after,
-        .loader36::before{
+        .loader36::before {
             content: "";
             position: absolute;
             display: inline-block;
@@ -613,15 +619,18 @@
             border: 2px solid;
             animation: rotate 2s ease-in-out infinite;
         }
-        .loader36::after{
+
+        .loader36::after {
             border-color: #FF3D00;
             animation-delay: 1s;
         }
-        .loader36::before{
+
+        .loader36::before {
             border-color: #fff;
         }
+
         .loader37::after,
-        .loader37::before{
+        .loader37::before {
             content: "";
             position: absolute;
             display: inline-block;
@@ -630,16 +639,18 @@
             border: 2px solid;
             animation: animloader37 2s ease-in-out infinite;
         }
-        .loader37::after{
+
+        .loader37::after {
             border-color: #FF3D00;
             animation-delay: 1s;
         }
-        .loader37::before{
+
+        .loader37::before {
             border-color: #fff;
         }
 
         .loader38::after,
-        .loader38::before{
+        .loader38::before {
             content: "";
             position: absolute;
             display: inline-block;
@@ -648,33 +659,53 @@
             border: 2px solid;
             animation: rotate 2s ease-in-out infinite alternate;
         }
-        .loader38::after{
+
+        .loader38::after {
             /* 利用alternate-reverse实现反向旋转 */
             border-color: #FF3D00;
             animation-direction: alternate-reverse;
         }
-        .loader38::before{
+
+        .loader38::before {
             border-color: #fff;
         }
 
-        .loader39::after,
-        .loader39::before{
-            content: "";
-            position: absolute;
-            display: inline-block;
+        .loader39 {
+            position: relative;
             width: 48px;
             height: 48px;
+            border: 2px solid #fff;
+            border-radius: 0;
+            animation: rotate 2s linear infinite;
+        }
+
+        .loader39::after,
+        .loader39::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 38px;
+            height: 38px;
             border: 2px solid;
-            animation: animloader39 4s ease-in-out infinite alternate;
+            animation: rotateBack 1.5s linear infinite;
             /* animloader39与rotate的区别 */
         }
-        .loader39::after{
+
+        .loader39::after {
             /* 利用alternate-reverse实现反向旋转 */
             border-color: #FF3D00;
-            animation-direction: alternate-reverse;
+
         }
-        .loader39::before{
+
+        .loader39::before {
+            width: 28px;
+            height: 28px;
             border-color: #fff;
+            animation: rotate 1s linear infinite;
         }
 
         @keyframes rotate {
@@ -905,6 +936,7 @@
                     -14px 0 0 -2px, -38px 0 0 -2px
             }
         }
+
         @keyframes boxShadowExpland6 {
             /* 该动画效果不连贯 没有初始化的状态 */
             /* 0% {
@@ -948,38 +980,40 @@
             } */
 
             0% {
-                box-shadow: 
-                14px 0 0 0, 
-                38px 0 0 0,
-                -14px 0 0 0, 
-                -38px -12px 0 0
+                box-shadow:
+                    14px 0 0 0,
+                    38px 0 0 0,
+                    -14px 0 0 0,
+                    -38px -12px 0 0
             }
 
             33% {
-                box-shadow: 
-                14px 0 0 0, 
-                38px 0 0 0,
-                -14px -12px 0 0,
-                -38px 0 0 0
+                box-shadow:
+                    14px 0 0 0,
+                    38px 0 0 0,
+                    -14px -12px 0 0,
+                    -38px 0 0 0
             }
 
             66% {
                 box-shadow:
-                14px -12px 0 0, 
-                38px 0 0 0,
-                -14px 0 0 0, 
-                -38px 0 0 0
+                    14px -12px 0 0,
+                    38px 0 0 0,
+                    -14px 0 0 0,
+                    -38px 0 0 0
             }
 
             100% {
-                box-shadow: 
-                14px 0 0 0, 
-                38px -12px 0 0,
-                -14px 0 0 0,
-                -38px 0 0 0
+                box-shadow:
+                    14px 0 0 0,
+                    38px -12px 0 0,
+                    -14px 0 0 0,
+                    -38px 0 0 0
             }
         }
+
         @keyframes animloader37 {
+
             /* ease-in-out配合scale可以实现抖动的效果 */
             0% {
                 transform: scale(0);
@@ -991,6 +1025,7 @@
                 opacity: 0;
             }
         }
+
         @keyframes animloader39 {
             0% {
                 transform: rotate(0)
@@ -1012,7 +1047,6 @@
                 transform: rotate(360deg)
             }
         }
-        
     </style>
 </head>
 
@@ -1136,7 +1170,8 @@
         <div class="loader loader38"></div>
     </section>
     <section>
-        <div class="loader loader39"></div>
+        <div class="loader loader39">
+        </div>
     </section>
 </body>
 
