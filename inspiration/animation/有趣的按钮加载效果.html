@@ -707,27 +707,31 @@
             animation: rotate 1s linear infinite;
         }
 
-        .loader40,.loader42{
+        .loader40,
+        .loader42 {
             width: 48px;
             height: 48px;
             background: #fff;
         }
-        .loader40{
+
+        .loader40 {
             animation: filpX 2s linear infinite;
         }
-        .loader42{
+
+        .loader42 {
             animation: animation42 1s linear infinite alternate;
         }
-        
 
-        .loader41{
+
+        .loader41 {
             position: relative;
             width: 48px;
             height: 48px;
             border: 2px solid #fff;
             overflow: hidden;
         }
-        .loader41::after{
+
+        .loader41::after {
             content: "";
             position: absolute;
             top: 0;
@@ -737,52 +741,257 @@
             background-color: #fff;
             animation: fill 2s ease-in-out infinite alternate;
         }
-        .loader43,.loader44{
+
+        .loader43,
+        .loader44 {
             width: 20px;
             height: 20px;
             background-color: #fff;
         }
-        .loader43{
+
+        .loader43 {
             animation: animation43 2s linear infinite;
         }
-        .loader44{
+
+        .loader44 {
             color: #fff;
             animation: animation44 2s linear infinite alternate;
         }
-        .loader45{
+
+        .loader45 {
             position: relative;
             left: -35px;
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
             border-radius: 4px;
             box-shadow: 0 30px, 0 -30px;
             background: currentColor;
             color: rgba(255, 255, 255, 1);
-            box-shadow: 0 40px,0 -40px;
+            box-shadow: 0 40px, 0 -40px;
             animation: animation45 2s linear infinite;
         }
+
         .loader45::after,
-        .loader45::before{
+        .loader45::before {
             position: absolute;
             top: 0;
             content: "";
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
             color: rgba(255, 255, 255, 1);
             box-shadow: 0 30px, 0 -30px;
             border-radius: 4px;
-            background: currentColor; // currentColor=color
-            box-shadow: 0 40px,0 -40px;
+            background: currentColor;
+            /* currentColor=color */
+            box-shadow: 0 40px, 0 -40px;
             animation: animation45 2s 0.2s ease infinite;
         }
-        .loader45::after{
+
+        .loader45::after {
             left: 80px;
         }
-        .loader45::before{
+
+        .loader45::before {
             left: 40px;
             animation-delay: 0.4s;
         }
-        
+
+        .loader46 {
+            width: 48px;
+            height: 6px;
+            display: inline-block;
+            position: relative;
+            border-radius: 4px;
+            top: -50px;
+            color: #fff;
+            animation: animation46 0.6s linear infinite;
+        }
+
+        .loader47 {
+            width: 48px;
+            height: 4px;
+            display: inline-block;
+            position: relative;
+            background-color: #ffffff;
+            border-radius: 4px;
+            color: #fff;
+            animation: animation47 .3s -.3s linear infinite alternate;
+        }
+
+        .loader47::after,
+        .loader47::before {
+            content: "";
+            display: block;
+            width: 48px;
+            height: 4px;
+            border-radius: 4px;
+            background-color: #ffffff;
+            animation: animation47 0.3s 0.45s linear infinite alternate;
+        }
+
+        .loader47::before {
+            margin-top: 15px;
+            /* animation-delay: .6s; */
+        }
+
+        .loader47::after {
+            margin-top: 13px;
+            animation-delay: 0s;
+        }
+
+        .loader48 {
+            width: 4px;
+            height: 4px;
+            display: inline-block;
+            position: relative;
+            background-color: #ffffff;
+            border-radius: 4px;
+            color: #fff;
+            animation: animation48 .3s -.3s linear infinite alternate;
+        }
+
+        .loader48::after,
+        .loader48::before {
+            content: "";
+            display: block;
+            width: 4px;
+            height: 4px;
+            position: absolute;
+            left: 50%;
+            top: 15px;
+            border-radius: 4px;
+            background-color: #ffffff;
+            transform: translateX(-50%);
+            animation: animation48 0.3s 0.45s linear infinite alternate;
+        }
+
+        .loader48::before {
+            /* animation-delay: .6s; */
+        }
+
+        .loader48::after {
+            top: -15px;
+            animation-delay: 0s;
+        }
+
+        .loader49 {
+            position: relative;
+            width: 20px;
+            height: 12px;
+            border-radius: 4px;
+            color: #fff;
+            background-color: currentColor;
+            animation: animation49 0.6s 0.3s ease infinite alternate;
+        }
+
+        .loader49::after,
+        .loader49::before {
+            content: "";
+            width: 20px;
+            height: 12px;
+            position: absolute;
+            border-radius: 4px;
+            top: 0;
+            right: 110%;
+            background: currentColor;
+            animation: animation49 0.6s ease infinite alternate;
+        }
+
+        .loader49::after {
+            left: 110%;
+            right: auto;
+            animation-delay: 0.6s;
+        }
+
+        .loader50 {
+            position: relative;
+            width: 90%;
+            height: 4.8px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .loader50::after {
+            position: absolute;
+            left: 0;
+            content: "";
+            width: 40px;
+            height: 4.8px;
+            background-color: #fff;
+            border-radius: 4px;
+            animation: animation50 1s linear infinite alternate;
+        }
+
+        .loader51 {
+            position: relative;
+            width: 90%;
+            overflow: hidden;
+            height: 4.8px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .loader51::after {
+            position: absolute;
+            left: 0;
+            content: "";
+            width: 40px;
+            height: 4.8px;
+            background-color: #fff;
+            border-radius: 4px;
+            animation: animation51 1s linear infinite;
+        }
+
+        .loader52 {
+            position: relative;
+            width: 90%;
+            overflow: hidden;
+            height: 4.8px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .loader52::after {
+            position: absolute;
+            left: 0;
+            content: "";
+            height: 4.8px;
+            background-color: #fff;
+            border-radius: 4px;
+            animation: animation52 1s linear infinite;
+        }
+
+        .loader53 {
+            width: 0;
+            height: 4.8px;
+            display: inline-block;
+            position: relative;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            animation: animFw 8s linear infinite;
+        }
+
+        .loader53::after,
+        .loader53::before {
+            content: '';
+            width: 10px;
+            height: 1px;
+            background: #fff;
+            position: absolute;
+            top: 9px;
+            right: -2px;
+            opacity: 0;
+            transform: rotate(-45deg) translateX(0px);
+            animation: coli1 0.3s linear infinite;
+        }
+
+        .loader53::before {
+            top: -4px;
+            transform: rotate(45deg);
+            animation: coli2 0.3s linear infinite;
+        }
+
+
 
         @keyframes rotate {
             0% {
@@ -1123,6 +1332,7 @@
                 transform: rotate(360deg)
             }
         }
+
         @keyframes filpX {
             0% {
                 transform: perspective(200px) rotateX(0deg) rotateY(0deg);
@@ -1136,69 +1346,226 @@
                 transform: perspective(200px) rotateX(-180deg) rotateY(-180deg)
             }
         }
+
         @keyframes fill {
-            0%{
+            0% {
                 transform: translateY(110%);
             }
-            100%{
+
+            100% {
                 transform: translateY(0);
             }
         }
+
         @keyframes animation42 {
-            0%{
+            0% {
                 transform: rotate(0) scale(0.1);
             }
-            50%{
+
+            50% {
                 transform: rotate(180deg) scale(0.5);
             }
-            100%{
+
+            100% {
                 transform: rotate(360deg) scale(1);
             }
         }
+
         @keyframes animation43 {
-            0%{
-                transform: translate(0,0) rotateX(0) rotateY(0);
+            0% {
+                transform: translate(0, 0) rotateX(0) rotateY(0);
             }
-            25%{
-                transform: translate(100%,0) rotateX(0) rotateY(180deg);
+
+            25% {
+                transform: translate(100%, 0) rotateX(0) rotateY(180deg);
             }
-            50%{
-                transform: translate(100%,100%) rotateX(180deg) rotateY(180deg);
+
+            50% {
+                transform: translate(100%, 100%) rotateX(180deg) rotateY(180deg);
             }
-            75%{
-                transform: translate(0,100%) rotateX(180deg) rotateY(0);
+
+            75% {
+                transform: translate(0, 100%) rotateX(180deg) rotateY(0);
             }
-            100%{
-                transform: translate(0,0) rotateX(0) rotateY(0);
+
+            100% {
+                transform: translate(0, 0) rotateX(0) rotateY(0);
             }
         }
+
         @keyframes animation44 {
-            0%{
-                box-shadow: 0 0,0 0,0 0;
+            0% {
+                box-shadow: 0 0, 0 0, 0 0;
             }
-            33%{
-                box-shadow: 20px 0,20px 0,20px 0,20px 0;
+
+            33% {
+                box-shadow: 20px 0, 20px 0, 20px 0, 20px 0;
+            }
+
+            66% {
+                box-shadow: 20px 0, 20px 20px, 20px 20px, 20px 20px;
+            }
+
+            100% {
+                box-shadow: 20px 0, 20px 20px, 0px 20px, 0 0;
+            }
+        }
+
+        @keyframes animation45 {
+            0% {
+                top: 0;
+                color: rgba(255, 255, 255, 1);
+            }
+
+            50% {
+                top: 30px;
+                color: rgba(255, 255, 255, 0.2);
+            }
+
+            100% {
+                top: 0;
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+
+        @keyframes animation46 {
+            0% {
+                box-shadow: -10px 20px, 10px 35px, 0px 50px
+            }
+
+            25% {
+                box-shadow: 0px 20px, 0px 35px, 10px 50px
+            }
+
+            50% {
+                box-shadow: 10px 20px, -10px 35px, 0px 50px
+            }
+
+            75% {
+                box-shadow: 0px 20px, 0px 35px, -10px 50px
+            }
+
+            100% {
+                box-shadow: -10px 20px, 10px 35px, 0px 50px
+            }
+        }
+
+        @keyframes animation47 {
+            0% {
+                width: 4px;
+            }
+
+            100% {
+                width: 48px;
+            }
+        }
+
+        @keyframes animation48 {
+            0% {
+                width: 4px;
+            }
+
+            100% {
+                width: 48px;
+            }
+        }
+
+        @keyframes animation49 {
+            0% {
+                width: 20px;
+            }
+
+            100% {
+                width: 30px;
+            }
+        }
+
+        @keyframes animation50 {
+            0% {
+                left: 0;
+            }
+
+            /* 33%{
+              left: 33%;
             }
             66%{
-                box-shadow: 20px 0,20px 20px,20px 20px,20px 20px;
-            }
-            100%{
-                box-shadow: 20px 0,20px 20px,0px 20px,0 0;
+                left: 66%;
+            } */
+            100% {
+                left: calc(100% - 40px);
             }
         }
-        @keyframes animation45 {
-           0%{
-               top: 0;
-               color: rgba(255, 255, 255, 1);
-           } 
-           50%{
-               top: 30px;
-               color: rgba(255, 255, 255, 0.2);
-           } 
-           100%{
-               top: 0;
-               color: rgba(255, 255, 255, 1);
-           } 
+
+        @keyframes animation51 {
+            0% {
+                left: 0;
+                transform: translateX(-100%)
+            }
+
+            100% {
+                left: 100%;
+                transform: translateX(0%)
+            }
+        }
+
+        @keyframes animation52 {
+            0% {
+                left: 0;
+                width: 0;
+            }
+
+            25% {
+                left: 0;
+                width: 50%;
+            }
+
+            50% {
+                left: 0;
+                width: 100%;
+                transform: translateX(0)
+            }
+
+            75% {
+                width: 100%;
+                transform: translateX(50%)
+            }
+
+            100% {
+                width: 100%;
+                transform: translateX(100%)
+            }
+        }
+        @keyframes animFw {
+            0% {
+                width: 0
+            }
+
+            100% {
+                width: 100%
+            }
+        }
+
+        @keyframes coli1 {
+            0% {
+                transform: rotate(-45deg) translateX(0px);
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: rotate(-45deg) translateX(-45px);
+                opacity: 0;
+            }
+        }
+        @keyframes coli2 {
+            0% {
+                transform: rotate(45deg) translateX(0px);
+                opacity: 1;
+            }
+
+            100% {
+                transform: rotate(45deg) translateX(-45px);
+                opacity: 0.7;
+            }
         }
     </style>
 </head>
@@ -1342,6 +1709,39 @@
     </section>
     <section>
         <div class="loader45"></div>
+    </section>
+    <section>
+        <div class="loader46"></div>
+    </section>
+    <section>
+        <div class="loader47"></div>
+    </section>
+    <section>
+        <div class="loader48"></div>
+    </section>
+    <section>
+        <div class="loader49"></div>
+    </section>
+    <section>
+        <div class="loader50"></div>
+    </section>
+    <section>
+        <div class="loader51"></div>
+    </section>
+    <section>
+        <div class="loader52"></div>
+    </section>
+    <section>
+        <div class="loader53"></div>
+    </section>
+    <section>
+        <div class="loader54"></div>
+    </section>
+    <section>
+        <div class="loader55"></div>
+    </section>
+    <section>
+        <div class="loader56"></div>
     </section>
 </body>
 
