@@ -991,6 +991,142 @@
             animation: coli2 .3s linear infinite;
         }
 
+        .loader54 {
+            position: relative;
+            width: 120px;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 4px;
+        }
+
+        .loader54::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0%;
+            height: 4px;
+            background-size: 15px 15px;
+            background-color: #fff;
+            background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.25) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.25) 75%, transparent 75%, transparent);
+            animation: animFw 6s linear infinite;
+        }
+
+
+        .loader55 {
+            position: relative;
+            width: 120px;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .loader55::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0%;
+            height: 4px;
+            background-size: 15px 15px;
+            background-color: #fff;
+            background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.25) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.25) 75%, transparent 75%, transparent);
+            animation: animation55 6s linear infinite,
+                barStripe 1s linear infinite;
+        }
+
+        .loader56 {
+            position: relative;
+            width: 120px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .loader56::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 120px;
+            height: 40px;
+            background-size: 1em 1em;
+            background-color: #fff;
+            font-size: 30px;
+            background-image:
+                linear-gradient(45deg, rgba(0, 0, 0, 0.25) 25%,
+                    transparent 25%,
+                    transparent 50%,
+                    rgba(0, 0, 0, 0.25) 50%,
+                    rgba(0, 0, 0, 0.25) 75%,
+                    transparent 75%,
+                    transparent);
+            animation:
+                barStripe 2s linear infinite;
+        }
+
+
+        .loader57 {
+            position: relative;
+            width: 100px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 4px;
+            overflow: hidden;
+            border: 2px solid #fff;
+        }
+
+        .loader57::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 120px;
+            height: 10px;
+            background-size: 1em 1em;
+            background-color: #fff;
+            font-size: 30px;
+            background-image:
+                linear-gradient(45deg, rgba(0, 0, 0, 0.25) 25%,
+                    transparent 25%,
+                    transparent 50%,
+                    rgba(0, 0, 0, 0.25) 50%,
+                    rgba(0, 0, 0, 0.25) 75%,
+                    transparent 75%,
+                    transparent);
+            animation:
+                barStripe 2s linear infinite;
+        }
+
+        .loader58 {
+            width: 96px;
+            height: 24px;
+            display: inline-block;
+            background-color: #FFF;
+            border: 1px solid #FFF;
+            border-radius: 4px;
+            background:
+                linear-gradient(45deg,
+                    transparent 49%,
+                    #FFF 50%,
+                    #FFF 50%,
+                    transparent 51%,
+                    transparent),
+                linear-gradient(-45deg,
+                    transparent 49%,
+                    #FFF 50%,
+                    #FFF 50%,
+                    transparent 51%,
+                    transparent);
+            font-size: 15px;
+            background-size: 1em 1em;
+            -webkit-animation: barStripe 0.6s linear infinite;
+            animation: barStripe 0.6s linear infinite;
+        }
+
+
         @keyframes rotate {
             0% {
                 transform: rotate(0deg);
@@ -1533,6 +1669,7 @@
                 transform: translateX(100%)
             }
         }
+
         @keyframes animFw {
             0% {
                 width: 0
@@ -1554,6 +1691,7 @@
                 opacity: 0;
             }
         }
+
         @keyframes coli2 {
             0% {
                 transform: rotate(45deg) translateX(0px);
@@ -1563,6 +1701,28 @@
             100% {
                 transform: rotate(45deg) translateX(-45px);
                 opacity: 0.7;
+            }
+        }
+
+        @keyframes animation55 {
+            0% {
+                width: 0;
+                /* transform: translateX(0); */
+            }
+
+            100% {
+                width: 100%;
+                /* transform: translateX(-100%); */
+            }
+        }
+
+        @keyframes barStripe {
+            0% {
+                background-position: 1em 0;
+            }
+
+            100% {
+                background-position: 0 0;
             }
         }
     </style>
@@ -1740,6 +1900,36 @@
     </section>
     <section>
         <div class="loader56"></div>
+    </section>
+    <section>
+        <div class="loader57"></div>
+    </section>
+    <section>
+        <div class="loader58"></div>
+    </section>
+    <section>
+        <div class="loader59"></div>
+    </section>
+    <section>
+        <div class="loader60"></div>
+    </section>
+    <section>
+        <div class="loader61"></div>
+    </section>
+    <section>
+        <div class="loader62"></div>
+    </section>
+    <section>
+        <div class="loader63"></div>
+    </section>
+    <section>
+        <div class="loader64"></div>
+    </section>
+    <section>
+        <div class="loader65"></div>
+    </section>
+    <section>
+        <div class="loader66"></div>
     </section>
 </body>
 
