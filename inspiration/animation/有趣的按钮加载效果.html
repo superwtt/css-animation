@@ -1227,22 +1227,98 @@
             border: 15px solid transparent;
             border-top-color: #FFF;
         }
-        .loader62{
+
+        .loader62 {
             position: relative;
             width: 15px;
             height: 20px;
             background-color: #FFF;
             animation: jump 0.4s ease-in infinite alternate;
         }
-        .loader62::after{
+
+        .loader62::after {
             position: absolute;
             content: "";
             left: 50%;
-                bottom: 100%;
+            bottom: 100%;
             transform: translate(-50%, 0);
             border: 15px solid transparent;
             border-bottom-color: #FFF;
         }
+
+        .loader63 {
+            width: 48px;
+            height: 12px;
+            background: #fff;
+            display: inline-block;
+            position: relative;
+        }
+
+        .loader63::after {
+            content: '';
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 0);
+            position: absolute;
+            border: 15px solid transparent;
+            border-top-color: #fff;
+            animation: jump 0.4s ease-in-out infinite alternate;
+        }
+
+        .loader63::before {
+            content: '';
+            left: 50%;
+            bottom: 25px;
+            transform: translate(-50%, 0);
+            position: absolute;
+            width: 15px;
+            height: 20px;
+            background: #fff;
+            animation: jump 0.4s ease-in-out infinite alternate;
+        }
+
+        .loader64,.loader65 {
+            width: 48px;
+            height: 24px;
+            border: 1px solid #fff;
+            position: relative;
+        }
+
+        .loader64::after,.loader65::after {
+            content: "";
+            position: absolute;
+            right: -5px;
+            top: 50%;
+            width: 5px;
+            height: 12px;
+            transform: translateY(-50%);
+            background-color: #FFF;
+        }
+
+        .loader64::before {
+            content: "";
+            width: 20px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background-color: #FFF;   
+            animation: animFw 1.5s linear infinite;
+        }
+
+
+        .loader64::before{
+            box-shadow: 12px 0 0 0 #fff;
+            /* animation: animation65 1.5s linear infinite; */
+        }
+
+        @keyframes animation65 {
+            0%{
+                box-shadow: 12px 0 0 0 #fff;
+            }
+        }
+        
 
         @keyframes jump {
             0% {
