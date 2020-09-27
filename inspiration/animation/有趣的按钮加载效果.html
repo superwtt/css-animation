@@ -1156,6 +1156,104 @@
             animation-duration: 1s;
         }
 
+        .loader60 {
+            width: 175px;
+            height: 80px;
+            position: relative;
+        }
+
+        .loader60::after {
+            content: '';
+            left: 60px;
+            bottom: 18px;
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            background-image:
+                radial-gradient(circle 8px at 18px 18px, #263238 100%, transparent 0),
+                radial-gradient(circle 4px at 18px 0px, #263238 100%, transparent 0),
+                radial-gradient(circle 4px at 0px 18px, #263238 100%, transparent 0),
+                radial-gradient(circle 4px at 36px 18px, #263238 100%, transparent 0),
+                radial-gradient(circle 4px at 18px 36px, #263238 100%, transparent 0),
+                radial-gradient(circle 4px at 30px 5px, #263238 100%, transparent 0),
+                radial-gradient(circle 4px at 30px 5px, #263238 100%, transparent 0),
+                radial-gradient(circle 4px at 30px 30px, #263238 100%, transparent 0),
+                radial-gradient(circle 4px at 5px 30px, #263238 100%, transparent 0),
+                radial-gradient(circle 4px at 5px 5px, #263238 100%, transparent 0);
+            background-repeat: no-repeat;
+            animation: rotateBack 3s linear infinite;
+        }
+
+        .loader60::before {
+            content: '';
+            left: 94px;
+            bottom: 15px;
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            background-image:
+                radial-gradient(circle 5px at 12px 12px, #263238 100%, transparent 0),
+                radial-gradient(circle 2.5px at 12px 0px, #263238 100%, transparent 0),
+                radial-gradient(circle 2.5px at 0px 12px, #263238 100%, transparent 0),
+                radial-gradient(circle 2.5px at 24px 12px, #263238 100%, transparent 0),
+                radial-gradient(circle 2.5px at 12px 24px, #263238 100%, transparent 0),
+                radial-gradient(circle 2.5px at 20px 3px, #263238 100%, transparent 0),
+                radial-gradient(circle 2.5px at 20px 3px, #263238 100%, transparent 0),
+                radial-gradient(circle 2.5px at 20px 20px, #263238 100%, transparent 0),
+                radial-gradient(circle 2.5px at 3px 20px, #263238 100%, transparent 0),
+                radial-gradient(circle 2.5px at 3px 3px, #263238 100%, transparent 0);
+            background-repeat: no-repeat;
+            animation: rotateBack 4s linear infinite;
+        }
+
+        .loader61 {
+            position: relative;
+            width: 15px;
+            height: 20px;
+            background-color: #FFF;
+            animation: jump 0.4s ease-in infinite alternate;
+        }
+
+        .loader61::after {
+            position: absolute;
+            content: "";
+            left: 50%;
+            top: 100%;
+            transform: translate(-50%, 0);
+            border: 15px solid transparent;
+            border-top-color: #FFF;
+        }
+        .loader62{
+            position: relative;
+            width: 15px;
+            height: 20px;
+            background-color: #FFF;
+            animation: jump 0.4s ease-in infinite alternate;
+        }
+        .loader62::after{
+            position: absolute;
+            content: "";
+            left: 50%;
+                bottom: 100%;
+            transform: translate(-50%, 0);
+            border: 15px solid transparent;
+            border-bottom-color: #FFF;
+        }
+
+        @keyframes jump {
+            0% {
+                transform: translate(-50%, 5px)
+            }
+
+            100% {
+                transform: translate(-50%, -5px)
+            }
+        }
+
 
         @keyframes rotate {
             0% {
