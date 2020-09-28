@@ -1320,6 +1320,43 @@
             animation: animation65 2s linear infinite;
         }
 
+        .loader66{
+            position: relative;
+            width: 48px;
+            height: 48px;
+            border: 4px solid #fff;
+            border-radius: 0 0 4px 4px;
+        }
+        .loader66::after{
+            content: "";
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            width: 20px;
+            height: 25px;
+            transform: translateY(-50%);
+            border: 4px solid #fff;
+            border-radius: 0 4px 4px 0;
+        }
+        .loader66::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 20px;
+            background-color: #FF3D00;
+            animation: animation66 2s linear infinite alternate;
+        }
+        @keyframes animation66 {
+            0%{
+               height: 0;
+            }
+            100%{
+                height: 100%;
+            }
+        }
+
         @keyframes animation65 {
             0%{
                 box-shadow: 14px 0 0 0 transparent,26px 0 0 0 transparent,38px 0 0 0 transparent,50px 0 0 0 transparent;
