@@ -1,62 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body,html{
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+        * {
+            margin: 0;
+            padding: 0;
         }
-        body{
+
+        body {
+            width: 100vw;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #222;
+            background-color: #333;
+            overflow: hidden;
         }
-        main{
+
+        article {
+            flex: 1;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: 5px solid silver;
+        }
+
+        .main1 {
+            position: relative;
             width: 400px;
             height: 400px;
-            border: 5px solid silver;
-            position: relative;
-            perspective: 600px;
+            cursor: pointer;
+            /* border: 5px solid silver; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 1s;
             transform-style: preserve-3d;
+            transform: perspective(900px);
+            transform-origin: center center -200px;
+            /* transform: perspective(600px) rotateX(-45deg); */
         }
-        main:hover div:nth-child(1){
+
+        .article1:hover .main1 {
+            transform: perspective(900px) rotateY(555deg);
+        }
+
+        .img {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+        }
+        .img img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .img:nth-child(1) {
+            transform-origin: center center -200px;
+            transform: rotateY(90deg);
+        }
+
+        .img:nth-child(2) {
+            transform-origin: center center -200px;
             transform: rotateY(180deg);
         }
-        main:hover div:nth-child(2){
-            transform: rotateY(0);
+
+        .img:nth-child(3) {
+            transform-origin: center center -200px;
+            transform: rotateY(270deg);
         }
-        div{
-            transition: all 1s;
-            cursor: pointer;
+
+        .img:nth-child(4) {
+            transform-origin: center center -200px;
+            transform: rotateY(360deg);
+        }
+
+        /* 关键步骤1：给main元素加透视，transform:perspective(900px);而不是perspective(900px)，因为后者是整体透视子元素，会有偏差，前者是透视自己 */
+        /* 关键步骤2：透视加上去之后想要看3D效果还得给main元素加上transform-style:preserve-3d; */
+        /* 关键步骤3：旋转的基点是xy轴在中心旋转，Z轴在纵深上设置距离旋转 */
+        /* 关键步骤4：main的旋转基点也要改变成center center -200px的距离，相当于图片四张玻璃片盖在main这个玻璃片上，四张有图片的玻璃片旋转点变成center center -200px，那main这边也要变成center center -200px，main */
+        /* 和四个玻璃片的旋转基点是一样的 */
+        /* 可以结合js做鼠标hover的效果 */
+
+        .main2 {
+            width: 300px;
+            height: 300px;
+            /* border: 5px solid silver; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform-style: preserve-3d;
+            transition: all 2s;
+            transform-origin: center center 100px;
+            transform: perspective(900px) rotateY(-45deg);
+        }
+
+        .article2:nth-child(2):hover .main2 {
+            transform: perspective(900px) rotateY(185deg);
+        }
+
+        .div1 {
             position: absolute;
+            font-size: 30px;
+            color: white;
             width: 200px;
             height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 30px;
-            backface-visibility: hidden;
+            transform-origin: center center 100px;
+            opacity: 0.8;
         }
-        div:nth-child(1){
+
+        .div1:nth-child(1) {
+            background-color: steelblue;
+            transform: rotateY(90deg);
+        }
+
+        .div1:nth-child(2) {
+            background-color: lightcoral;
+            transform: rotateY(180deg);
+        }
+
+        .div1:nth-child(3) {
+            background-color: aqua;
+            transform: rotateY(270deg);
+        }
+
+        .div1:nth-child(4) {
+            background-color: sienna;
+            transform: rotateY(360deg);
+        }
+
+        .div1:nth-child(5) {
+            background-color: purple;
+            transform-origin: top;
+            transform: rotateX(90deg);
+        }
+
+        .div1:nth-child(6) {
             background-color: tomato;
+            transform-origin: bottom;
+            transform: rotateX(-90deg);
         }
-        div:nth-child(2){
-            transform: rotateY(-180deg);
-            background-color: slateblue;
-        }
-        
     </style>
 </head>
+
 <body>
-    <main>
-       <div>1</div> 
-       <div>2</div> 
-    </main>
+    <article class="article1">
+        <main class="main1">
+            <div class="img"><img src="https://oscimg.oschina.net/oscnet/up-08c01e2ed461daabc82a8ec91890b204b36.png"
+                    alt=""></div>
+            <div class="img"><img src="https://oscimg.oschina.net/oscnet/up-9b4d4b43b79851b9a49741bf8feeb21a734.JPEG"
+                    alt=""></div>
+            <div class="img"><img src="https://oscimg.oschina.net/oscnet/up-b46830d13f7f3f6b456eb3d39f76ec2c26b.JPEG"
+                    alt=""></div>
+            <div class="img"><img src="https://oscimg.oschina.net/oscnet/up-a7119e7b69bc3b61639ddd9a212fd286534.png"
+                    alt=""></div>
+        </main>
+    </article>
+    <article class="article2">
+        <main class="main2">
+            <div class="div1">1</div>
+            <div class="div1">2</div>
+            <div class="div1">3</div>
+            <div class="div1">4</div>
+            <div class="div1">5</div>
+            <div class="div1">6</div>
+        </main>
+    </article>
 </body>
+
 </html>
