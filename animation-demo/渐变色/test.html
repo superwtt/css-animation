@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        background: 
+          linear-gradient(#fff 4px, transparent 0),
+          linear-gradient(
+            45deg,
+            transparent 74px,
+            transparent 75px,
+            #a4a4a4 75px,
+            #a4a4a4 76px,
+            transparent 77px,
+            transparent 109px
+          ),
+          linear-gradient(
+            -45deg,
+            transparent 75px,
+            transparent 76px,
+            #a4a4a4 76px,
+            #a4a4a4 77px,
+            transparent 78px,
+            transparent 109px
+          ),
+          #fff;
+        background-size: 100% 6px, 109px 109px,
+          109px 109px;
+        background-position: 0px 0px, 0px 0px, 0px 0px;
+        /* animation: animate 2s linear infinite; */
+      }
+      @keyframes animate {
+        100% {
+          background-position: 10px 0, -10px 100%, 0 -10px, 100% 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
